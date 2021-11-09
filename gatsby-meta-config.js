@@ -18,7 +18,7 @@ module.exports = {
       thumbnail: 'profile.png', // Path to the image in the 'asset' folder
     },
     social: {
-      github: ``, // `https://github.com/zoomKoding`,
+      github: `https://github.com/sangzun-han`, // `https://github.com/zoomKoding`,
       linkedIn: ``, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
       email: ``, // `zoomkoding@gmail.com`,
     },
