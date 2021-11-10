@@ -1,4 +1,121 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 09 Nov 2021 14:11:25 GMT</lastBuildDate><item><title><![CDATA[변수]]></title><description><![CDATA[1. 변수 변수는 하나의 값을 저장하기 위해 확보한 메모리 공간 자체 또는 그 메모리 공간을 식별하기 위해 붙인 이름을 말한다. 간단히 말하자면 변수는 값의 위치를 가리키는 상징적인 이름이다. 10+20은 연산을 통해 새로운 값 3…]]></description><link>https://github.com/sangzun-han/자바스크립트/04.변수/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/04.변수/</guid><pubDate>Tue, 09 Nov 2021 13:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-변수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%B3%80%EC%88%98&quot; aria-label=&quot;1 변수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 변수&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 10 Nov 2021 15:13:31 GMT</lastBuildDate><item><title><![CDATA[변수]]></title><description><![CDATA[1. 값 값(value)은 식(expression)이 평가(evaluate)되어 생성된 결과를 말한다. 2. 리터럴 리터럴(literal)은  사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 값을 생성하는 표기법(notation…]]></description><link>https://github.com/sangzun-han/자바스크립트/05.표현식과 문/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/05.표현식과 문/</guid><pubDate>Wed, 10 Nov 2021 14:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-값&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EA%B0%92&quot; aria-label=&quot;1 값 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 값&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;값(value)은 식(expression)이 평가(evaluate)되어 생성된 결과를 말한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;2-리터럴&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EB%A6%AC%ED%84%B0%EB%9F%B4&quot; aria-label=&quot;2 리터럴 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 리터럴&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;리터럴(literal)은  사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 값을 생성하는 표기법(notation)을 말한다.&lt;/strong&gt;
+자바스크립트 엔진은 코드가 실행되는 시점인 런타임에 리터럴을 평가해 값을 생성한다. 즉 리터럴은 값을 생성하기 위해 미리 약속한 표기법이라고 할 수 있다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;리터럴&lt;/th&gt;
+&lt;th&gt;예시&lt;/th&gt;
+&lt;th&gt;비고&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;정수 리터럴&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;부동소수점 리터럴&lt;/td&gt;
+&lt;td&gt;10.5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2진수 리터럴&lt;/td&gt;
+&lt;td&gt;0b010001&lt;/td&gt;
+&lt;td&gt;0b로 시작&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8진수 리터럴&lt;/td&gt;
+&lt;td&gt;0o101&lt;/td&gt;
+&lt;td&gt;ES6에서 도입 0o로 시작&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16진수 리터럴&lt;/td&gt;
+&lt;td&gt;0x41&lt;/td&gt;
+&lt;td&gt;ES6에서 도입 0x로 시작&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;문자열 리터럴&lt;/td&gt;
+&lt;td&gt;‘Hello’&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;불리언 리터럴&lt;/td&gt;
+&lt;td&gt;true false&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;null 리터럴&lt;/td&gt;
+&lt;td&gt;null&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;undefined 리터럴&lt;/td&gt;
+&lt;td&gt;undefined&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;객체 리터럴&lt;/td&gt;
+&lt;td&gt;{name: ‘Lee’, address: ‘Seoul’}&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;배열 리터럴&lt;/td&gt;
+&lt;td&gt;[1,2,3]&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;함수 리터럴&lt;/td&gt;
+&lt;td&gt;function() {}&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;정규표현식 리터럴&lt;/td&gt;
+&lt;td&gt;/[A-Z]+/g&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&quot;3-표현식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%ED%91%9C%ED%98%84%EC%8B%9D&quot; aria-label=&quot;3 표현식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 표현식&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;표현식(expression)은 값으로 평가될 수 있는 문(statement)이다. 즉 표현식이 평가되면 새로운 값을 생성하거나 기존값을 참조한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var score = 100;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;100은 리터럴이다. 리터럴 100은 자바스크립트 엔진에 의해 평가되어 값을 생성하므로 리터럴은 그자체로 표현식이다.&lt;/p&gt;
+&lt;p&gt;표현식은 값으로 평가된다. 이때 표현식과 표현식이 평가된 값은 동등한 관계이다. 즉 동치(equivalent)다. 예를 들어 1+2 = 3에서 1 + 2는 3과 같다고 할 수 있다.
+자바스크립트의 표현식 1 + 2는 평가되어 값 3을 생성하므로 표현식 1 + 2와 값 3은 동치다.&lt;/p&gt;
+&lt;h1 id=&quot;4-문&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-%EB%AC%B8&quot; aria-label=&quot;4 문 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 문&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;문(statement)은 프로그램을 구성하는 기본 단위이자 최소 실행 단위이다.&lt;/strong&gt; 문의 집합으로 이루어진것이 프로그램이다.&lt;/p&gt;
+&lt;p&gt;문은 여러 토큰으로 구성된다. &lt;strong&gt;토큰(token)이란 문법적인 의미를 가지며 문법적으로 더 이상 나눌 수 없는 코드의 기본 요소를 의미한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;문은 명령문이라고도 부른다. 선언문, 할당문, 조건문, 반복문등으로 구분할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var x; // 변수 선언문
+
+x = 5; // 할당문
+
+function foo() {} // 함수 선언문
+
+if (x &gt; 1) {} // 조건문
+
+for (){} //반복문&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;5-세미콜론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-%EC%84%B8%EB%AF%B8%EC%BD%9C%EB%A1%A0&quot; aria-label=&quot;5 세미콜론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. 세미콜론&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;세미콜론(;)은 문의 종료를 나타낸다.&lt;/li&gt;
+&lt;li&gt;세미콜론은 생략 가능하다. why? 세미콜론 자동 삽입 기능(ASI = automatic semicolon insertion)이 암묵적으로 수행되기 때문&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;하지만 ASI가 제대로 동작하지 않는 경우가 있다.
+&lt;img src=&quot;/ASI.png&quot; alt=&quot;ASI&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;6-표현식인-문과-표현식이-아닌-문&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#6-%ED%91%9C%ED%98%84%EC%8B%9D%EC%9D%B8-%EB%AC%B8%EA%B3%BC-%ED%91%9C%ED%98%84%EC%8B%9D%EC%9D%B4-%EC%95%84%EB%8B%8C-%EB%AC%B8&quot; aria-label=&quot;6 표현식인 문과 표현식이 아닌 문 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;6. 표현식인 문과 표현식이 아닌 문&lt;/h1&gt;
+&lt;p&gt;표현식인 문과 표현식이 아닌 문을 구별하는 방법은 변수에 할당해 보는 것이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var x; // 변수 선언문은 표현식이 아닌 문이다
+x = 100; // 할당문은 그 자체로 표현식이면서 완전한 문이다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// 표현식이 아닌문은 값처럼 사용할 수 없다.
+var foo = var x; // SyntaxError&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var foo = x = 100;
+console.log(foo) // 100&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;완료값&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%99%84%EB%A3%8C%EA%B0%92&quot; aria-label=&quot;완료값 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;완료값&lt;/h3&gt;
+&lt;p&gt;크롬 개발자 도구에서 표현식이 아닌 문을 실행하면 언제나 undefined를 출력한다. 이를 &lt;strong&gt;완료값&lt;/strong&gt;이라고 한다. 완료값은 표현식의 평가 결과가 아니다. 따라서 다른 값과 같이 변수에 할당할 수 없고 참조할 수 없다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/completevalue.png&quot; alt=&quot;완료값&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[변수]]></title><description><![CDATA[1. 변수 변수는 하나의 값을 저장하기 위해 확보한 메모리 공간 자체 또는 그 메모리 공간을 식별하기 위해 붙인 이름을 말한다. 간단히 말하자면 변수는 값의 위치를 가리키는 상징적인 이름이다. 10+20은 연산을 통해 새로운 값 3…]]></description><link>https://github.com/sangzun-han/자바스크립트/04.변수/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/04.변수/</guid><pubDate>Tue, 09 Nov 2021 13:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-변수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%B3%80%EC%88%98&quot; aria-label=&quot;1 변수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 변수&lt;/h1&gt;
 &lt;p&gt;변수는 하나의 값을 저장하기 위해 확보한 메모리 공간 자체 또는 그 메모리 공간을 식별하기 위해 붙인 이름을 말한다. 간단히 말하자면 변수는 값의 위치를 가리키는 상징적인 이름이다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var result = 10 + 20;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;10+20은 연산을 통해 새로운 값 30을 생성한다. 연산을 통해 생성된 값 30은 메모리 공간에 저장된다. 이때 메모리에 저장된 값 30을 다시 읽어 들여 재사용할 수 있도록 값이 저장된 메모리 공간에 상징적인 이름을 붙인것이 변수이다.&lt;/p&gt;
