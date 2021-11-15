@@ -1,4 +1,137 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 11 Nov 2021 10:32:08 GMT</lastBuildDate><item><title><![CDATA[06. 데이터타입]]></title><description><![CDATA[데이터타입은 값의 종류를 말한다. 자바스크립트는 7개의 데이터 타입을 제공한다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 15 Nov 2021 11:05:11 GMT</lastBuildDate><item><title><![CDATA[07. 연산자]]></title><description><![CDATA[연산자(operator)는 하나 이상의 표현식을 대상으로 산술, 할당, 비교, 논리, 타입, 지수연산등을 수행하여 하나의 값을 만든다. 이때 연산의 대상을 피연산자(operand…]]></description><link>https://github.com/sangzun-han/자바스크립트/07.연산자/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/07.연산자/</guid><pubDate>Fri, 12 Nov 2021 07:00:00 GMT</pubDate><content:encoded>&lt;p&gt;연산자(operator)는 하나 이상의 표현식을 대상으로 산술, 할당, 비교, 논리, 타입, 지수연산등을 수행하여 하나의 값을 만든다. 이때 연산의 대상을 피연산자(operand)라고 한다.&lt;/p&gt;
+&lt;p&gt;피연산자는 ‘값’이라는 역할을 하며 연산자는 ‘피연산자를 연산하여 새로운 값을 만든다.’&lt;/p&gt;
+&lt;h1 id=&quot;1-산술-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;1 산술 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 산술 연산자&lt;/h1&gt;
+&lt;p&gt;산술 연산자는 피연산자를 대상으로 수학적 계산을 수행해 새로운 숫자 값을 만든다. 산술연산이 불가능한 경우 &lt;strong&gt;NaN&lt;/strong&gt;을 반환한다.&lt;/p&gt;
+&lt;h3 id=&quot;1-1-이항-산술-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-1-%EC%9D%B4%ED%95%AD-%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;1 1 이항 산술 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1-1. 이항 산술 연산자&lt;/h3&gt;
+&lt;p&gt;모든 이항 산술 연산자는 피연산자의 값을 변경하는 &lt;strong&gt;부수효과(side effect)&lt;/strong&gt;가 없다. 즉 피연산자의 값이 바뀌는 경우는 없고 언제나 새로운 값을 만들어 낸다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;5 + 2; // 7
+5 - 2; // 3
+5 * 2; // 10
+5 / 2; // 2.5
+5 % 2; // 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;1-2-단항-산술-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-2-%EB%8B%A8%ED%95%AD-%EC%82%B0%EC%88%A0-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;1 2 단항 산술 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1-2. 단항 산술 연산자&lt;/h3&gt;
+&lt;p&gt;단항 산술 연산자는 1개의 피연산자를 산술 연산하여 숫자 값을 만든다.
+증가/감소(++/—) 연산자는 피연산자의 값을 변경하는 부수효과가 있다.
+즉 증가/감소 연산을 하면 피연산자의 값을 변경하는 암묵적 할당이 이루어진다.&lt;/p&gt;
+&lt;p&gt;숫자 타입이 아닌 피연산자에 + 단항 연산자를 사용하면 피연산자를 숫자 타입으로 반환하여 반환한다. 이 때 피연산자를 변경하는것은 아니고 숫자 타입으로 변환된 값을 생성해서 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var x = &apos;1&apos;;
+console.log(+x); // 1
+console.log(x); // &quot;1&quot;
+
+var x = true;
+console.log(+x) // 1
+console.log(x) // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;1-3-문자열-연결-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-3-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%97%B0%EA%B2%B0-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;1 3 문자열 연결 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1-3. 문자열 연결 연산자&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;연산자는 피연산자 중 하나 이상이 문자열인 경우 문자열 연결 연산자로 동작한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&apos;1&apos; + 2; // &apos;12&apos;
+1 + &apos;2&apos;; // &apos;12&apos;
+
+1 + true; // 2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;개발자의 의도와는 상관없이 자바스크립트 엔진에 의해 암묵적으로 타입이 자동 변환되기도 한다. 이를 &lt;strong&gt;암묵적 타입 변환(implicit coercion) 또는 타입 강제 변환(type coercion)&lt;/strong&gt;이라고 한다 &lt;/p&gt;
+&lt;h1 id=&quot;2-할당-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%ED%95%A0%EB%8B%B9-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;2 할당 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 할당 연산자&lt;/h1&gt;
+&lt;p&gt;할당 연산자는 우항에 있는 피연산자의 평가 결과를 좌항에 있는 변수에 할당한다. 따라서 부수효과가 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var x;
+x = 10;
+x += 5;
+x -= 5
+
+var str = &apos;name is &apos;;
+str += &apos;Han&apos;;
+console.log(str) // &apos;name is Han&apos;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;일치비교(===)연산자는 좌항과 우항의 피연산자가 &lt;strong&gt;타입도 같고 값도 같은 경우에 true를 반환한다.&lt;/strong&gt; 암묵적 타입 변환을 하지 않고 값을 비교한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;5 === 5; // true
+5 === &apos;5&apos;; // false&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;자바스크립트에서 숫자 0은 양의 0과 음의 0으로 나누어져 있다. 이들을 비교하면 true를 반환한다. 또한 동일한 값인 NaN가 NaN을 비교하면 다른 값이라고 평가한다.&lt;/p&gt;
+&lt;p&gt;따라서 Object.is 메서드를 사용하면 정확한 비교 결과를 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;NaN === NaN // false
+Object.is(NaN, NaN) // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;NaN은 자신과 일치하지 않는 유일한 값이다 NaN을 조사하려면 &lt;strong&gt;isNaN&lt;/strong&gt;함수를 사용해야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;isNaN(NaN) // true
+isNaN(10) // false
+isNaN(1 + undefined) // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;2-1-대소-관계-비교-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-1-%EB%8C%80%EC%86%8C-%EA%B4%80%EA%B3%84-%EB%B9%84%EA%B5%90-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;2 1 대소 관계 비교 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-1. 대소 관계 비교 연산자&lt;/h3&gt;
+&lt;p&gt;대소 관계 비교 연산자는 피연산자의 크기를 비교하여 boolean값을 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;5 &gt; 0; // true
+5 &gt; 5; // false
+5 &gt;= 5; // true
+5 &amp;lt;= 5; // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;3-삼항-조건-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EC%82%BC%ED%95%AD-%EC%A1%B0%EA%B1%B4-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;3 삼항 조건 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 삼항 조건 연산자&lt;/h1&gt;
+&lt;p&gt;삼항 조건 연산자(ternary operator)는 조건식의 평가 결과에 따라 반환할 값을 결정한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;조건식 ? 조건식이 true일때 반환할 값 : 조건식이 false일때 반환할 값&lt;/strong&gt;
+만약 조건식의 평가 결과가 불리언 값이 아니면 불리언 값으로 암묵적 타입 변환된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var x = 2;
+var result = x % 2 ? &apos;홀수&apos; : &apos;짝수&apos;;
+// 2 % 2는 0이므로 false로 암묵적 타입 변환된다.
+
+console.log(result) // 짝수&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var x = 10;
+
+var result = if(x % 2) {result = &apos;홀수&apos;} else {result = &apos;짝수&apos;}
+//SyntaxError&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;삼항 조건 연산자 표현식은 값으로 평가할 수 있는 표현식인 문이다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;4-논리-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-%EB%85%BC%EB%A6%AC-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;4 논리 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 논리 연산자&lt;/h1&gt;
+&lt;p&gt;논리 연산자(logical operator)는 우항과 좌항의 피연산자를 논리 연산 한다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;논리 연산자&lt;/th&gt;
+&lt;th&gt;의미&lt;/th&gt;
+&lt;th&gt;부수효과&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;｜｜&lt;/td&gt;
+&lt;td&gt;논리합(OR)&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;#x26;&amp;#x26;&lt;/td&gt;
+&lt;td&gt;논리곱(AND)&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;!&lt;/td&gt;
+&lt;td&gt;부정(NOT)&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;논리 부정 연산자는 언제나 boolean값을 반환한다. 단 피연산자가 반드시 boolean값일 필요는 없다. 피연산자가 boolean타입이 아니라면 암묵적 타입 변환된다.&lt;/p&gt;
+&lt;h1 id=&quot;5-쉼표-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-%EC%89%BC%ED%91%9C-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;5 쉼표 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. 쉼표 연산자&lt;/h1&gt;
+&lt;p&gt;쉼표(,) 연산자는 왼쪽 피연산자부터 차례대로 피연산자를 평가하고 마지막 피연산자의 평가가 끝나면 마지막 피연산자의 평가 결과를 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var x,y,z;
+x = 1, y = 2, z = 3;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;6-그룹-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#6-%EA%B7%B8%EB%A3%B9-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;6 그룹 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;6. 그룹 연산자&lt;/h1&gt;
+&lt;p&gt;소괄호 ()로 피연산자를 감싸는 그룹 연산자는 자신의 피연산자인 표현식을 가장 먼저 평가한다. 그룹 연산자는 연산자 우선순위가 가장 높다.&lt;/p&gt;
+&lt;h1 id=&quot;7-typeof-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#7-typeof-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;7 typeof 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;7. typeof 연산자&lt;/h1&gt;
+&lt;p&gt;typeof 연산자는 피연산자의 데이터 타입을 문자열로 반환한다. typeof 연산자는 7가지 문자열 &lt;strong&gt;‘string’, ‘number’, ‘boolean’, ‘undefined’, ‘symbol’, ‘object’, ‘function’&lt;/strong&gt; 중 하나를 반환한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;null을 반환하는 경우는 없다. 자바스크립트 첫번째 버전의 버그이지만 기존 코드에 영향을 줄 수 있기 때문에 수정을 하지 않는다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;null 타입인지 확인할때는 일치 연산자(===)을 사용한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;typeof &apos;&apos; // String
+typeof 1 // number
+typeof NaN // number
+typeof true // boolean
+typeof undefiend // undefined
+typeof Symbol() // symbol
+typeof null // object
+typeof [] // object
+typeof {} // object
+typeof new Date() // object
+typeof /test/gi // object
+typeof function(){} // function
+
+var foo = null;
+foo === null // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;8-지수-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#8-%EC%A7%80%EC%88%98-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;8 지수 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;8. 지수 연산자&lt;/h1&gt;
+&lt;p&gt;ES7에서 도입된 지수연산자는 좌항의 피연산자를 밑(base)로 우항의 피연산자를 지수(exponent)로 거듭 제곱하여 계산한다. 지수 연산자 이전에는 Math.pow 메서드를 사용했다.&lt;/p&gt;
+&lt;p&gt;음수를 거듭제곱의 밑으로 사용하려면 괄호로 묶어야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(-5) ** 2;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;9-연산자의-부수효과&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#9-%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-%EB%B6%80%EC%88%98%ED%9A%A8%EA%B3%BC&quot; aria-label=&quot;9 연산자의 부수효과 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;9. 연산자의 부수효과&lt;/h1&gt;
+&lt;p&gt;대부분의 연산자는 다른 코드에 영향을 주지 않는다. 예를들어 2*3은 다른 코드에 어떠한 영향도 주지 않고 새로운 값 6을 생성한다. 하지만 일부 연산자는 다른 코드에 영향을 주는 부수 효과가 있다. ex) 할당연산자(=), 증가/감소 연산자(++/—), delete 연산자&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://velog.io/@hanminss/JS-Group-Study-07.%EC%97%B0%EC%82%B0%EC%9E%90&quot;&gt;study width&lt;/p&gt;</content:encoded></item><item><title><![CDATA[06. 데이터타입]]></title><description><![CDATA[데이터타입은 값의 종류를 말한다. 자바스크립트는 7개의 데이터 타입을 제공한다.
 7개의 데이터 타입은 원시타입(primitive type)입과 객체타입(object/reference type)으로 분류할 수 있다.…]]></description><link>https://github.com/sangzun-han/자바스크립트/06.데이터 타입/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/06.데이터 타입/</guid><pubDate>Thu, 11 Nov 2021 09:30:00 GMT</pubDate><content:encoded>&lt;p&gt;데이터타입은 값의 종류를 말한다. 자바스크립트는 7개의 데이터 타입을 제공한다.
 7개의 데이터 타입은 원시타입(primitive type)입과 객체타입(object/reference type)으로 분류할 수 있다.&lt;/p&gt;
 &lt;h1 id=&quot;1-숫자-타입&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%88%AB%EC%9E%90-%ED%83%80%EC%9E%85&quot; aria-label=&quot;1 숫자 타입 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 숫자 타입&lt;/h1&gt;
