@@ -1,13 +1,13 @@
 ---
 emoji: 
 title: interview 
-date: '2021-11-15 20:00:00'
+date: '2021-11-17 00:00:00'
 author: sangzun
 tags: interview
 categories: intervirew
 ---
 
-9. What is the difference between == and === operators
+### 9. What is the difference between == and === operators
 
 JavaScript provides both strict(===, !==) and type-converting(==, !=) equality comparison. 
 
@@ -47,4 +47,23 @@ strict 연산자는 변수의 타입을 고려하고 non-strict 연산자는 변
 
 - null과 undefined타입은 ===로 비교할때 같지 않다 ==로 비교할때는 같다.
 
+
+
+
+### 17. What is the difference between let and var
+
+|var|let|
+|---|---|
+|It is been available from the beginning of JavaScript|Introduced as part of ES6|
+|It has function scope|It has block scope|
+|Variables will be hoisted|Hoisted but not initalized|
+
+--해석--
+
+
+|var|let|
+|---|---|
+|자바스크립트 초기부터 사용할 수 있었다.|ES6에서 도입되었다.|
+|function scope|block scope|
+|변수가 호이스팅 된다.|호이스팅 되지만 초기화는 되지 않는다.|
 <a href="https://github.com/sudheerj/javascript-interview-questions">질문 목록
