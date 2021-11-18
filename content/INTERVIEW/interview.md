@@ -49,8 +49,16 @@ strict 연산자는 변수의 타입을 고려하고 non-strict 연산자는 변
 
 
 
+### 17. What is the purpose of the let keyword
 
-### 17. What is the difference between let and var
+The let statement declares a block scope local variable. Hence the variables defined with let keyword are limited in scope to the block, statement, or expression on which it is used. Whereas variables declared with the var keyword used to define a variable globally, or locally to an entire function regardless of block scope
+
+--해석--
+
+let은 block scope 변수를 선언하는데 사용되는 키워드이다. 그러므로 block, statement, expression의 범위를 제한한다. 반면 var는 block scope에 상관없이 전역변수 또는 함수 전체의 지역변수로 정의된다. 
+
+
+### 18. What is the difference between let and var
 
 |var|let|
 |---|---|
