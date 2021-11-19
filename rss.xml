@@ -1,4 +1,187 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 16 Nov 2021 15:47:56 GMT</lastBuildDate><item><title><![CDATA[interview]]></title><description><![CDATA[9. What is the difference between == and === operators JavaScript provides both strict(===, !==) and type-converting(==, !=) equality…]]></description><link>https://github.com/sangzun-han/INTERVIEW/interview/</link><guid isPermaLink="false">https://github.com/sangzun-han/INTERVIEW/interview/</guid><pubDate>Tue, 16 Nov 2021 15:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;9-what-is-the-difference-between--and--operators&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#9-what-is-the-difference-between--and--operators&quot; aria-label=&quot;9 what is the difference between  and  operators permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;9. What is the difference between == and === operators&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 19 Nov 2021 14:25:03 GMT</lastBuildDate><item><title><![CDATA[10. 객체 리터럴]]></title><description><![CDATA[1. 객체 자바스크립트는 객체(Object) 기반의 프로그래밍 언어이며, 자바스크립트를 구성하는 거의 ‘모든 것’이 객체다 원시값을 제외한 나머지값은 모두 객체다. 객체는 0개 이상의 프로퍼티로 구성된 집합이며 프로퍼티는 key와 value…]]></description><link>https://github.com/sangzun-han/자바스크립트/10.객체 리터럴/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/10.객체 리터럴/</guid><pubDate>Fri, 19 Nov 2021 14:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-객체&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EA%B0%9D%EC%B2%B4&quot; aria-label=&quot;1 객체 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 객체&lt;/h1&gt;
+&lt;p&gt;자바스크립트는 객체(Object) 기반의 프로그래밍 언어이며, 자바스크립트를 구성하는 거의 ‘모든 것’이 객체다 원시값을 제외한 나머지값은 모두 객체다.&lt;/p&gt;
+&lt;p&gt;객체는 0개 이상의 프로퍼티로 구성된 집합이며 프로퍼티는 key와 value로 구성된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var person = {
+  name : &apos;Lee&apos;,
+  age: 20
+};&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;프로퍼티의 값이 함수일 경우. 일반 함수와 구분하기 위해 메서드(method)라고 부른다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var counter = {
+  num: 0,
+  increase: function() {
+    this.num++;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;2-객체-리터럴에-의한-객체-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EA%B0%9D%EC%B2%B4-%EB%A6%AC%ED%84%B0%EB%9F%B4%EC%97%90-%EC%9D%98%ED%95%9C-%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;2 객체 리터럴에 의한 객체 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 객체 리터럴에 의한 객체 생성&lt;/h1&gt;
+&lt;p&gt;자바스크립트는 프로토타입 기반 객체지향 언어로서 클래스 기반객체지향 언어와는 달리 다양한 객체 생성 방법을 지원한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;객체 리터럴&lt;/li&gt;
+&lt;li&gt;Object 생성 함수&lt;/li&gt;
+&lt;li&gt;생성자 함수&lt;/li&gt;
+&lt;li&gt;Object.create 메서드&lt;/li&gt;
+&lt;li&gt;클래스 (ES6)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;객체 리터럴은 중괄호({…})내에 0개 이상의 프로퍼티를 정의한다. &lt;strong&gt;변수에 할당되는 시점에 자바스크립트 엔진은 리터럴을 해석해 객체를 생성한다&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var person = {
+  name: &apos;Lee&apos;,
+  sayHello: function() {
+    console.log(`Hello My name is ${this.name}`);
+  }
+};
+
+console.log(typeof person) // object
+console.log(person) // {name: &quot;Lee&quot;, sayHello: f}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;만약 중괄호 내에 프로퍼티를 정의하지 않으면 빈 객체가 생성된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;객체 리터럴의 중괄호는 코드블록을 의미하지 않는다.&lt;/strong&gt; 코드 블록의 중괄호 뒤에는 세미콜론을 붙이지 않는다. 하지만 객체 리터럴은 값으로 평가되는 표현식이다. 따라서 객체 리터럴의 닫는 중괄호 뒤에는 세미콜론을 붙인다.&lt;/p&gt;
+&lt;h1 id=&quot;3-프로퍼티&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0&quot; aria-label=&quot;3 프로퍼티 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 프로퍼티&lt;/h1&gt;
+&lt;p&gt;객체는 프로퍼티의 집합이며 프로퍼티는 키(key)와 값(value)으로 구성된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;프로퍼티 키 : 빈 문자열을 포함하는 모든 문자열 또는 symbol 값&lt;/li&gt;
+&lt;li&gt;프로퍼티 값 : 자바스크립트에서 사용할 수 있는 모든 값&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;식별자 네이밍 규칙을 따르지 않는 이름에는 반드시 따옴표를 사용해야 한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var person = {
+  firstName: &apos;Ung-Mo&apos;,
+  &apos;lst-name&apos;: &apos;Lee&apos;
+};
+
+console.log(person) // {firstName: &quot;Ung-Mo&quot;, last-name: &quot;Lee&quot;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;빈 문자열을 프로퍼티 키로사용해도 에러가 발생하지 않지만 키로서의 의미를 갖지못하므로 권장하지 않는다.&lt;/p&gt;
+&lt;p&gt;프로퍼티 키에 문자열이나 심벌 값 외의 값을 사용하면 암묵적 타입 변화를 통해 문자열이 된다.&lt;/p&gt;
+&lt;p&gt;var, function같은 예약어를 상용해도 프로퍼티 키로 사용해도 에러가 발생하지 않지만 예상치 못한 에러가 발생할 여지가 있으므로 권장되지 않는다.&lt;/p&gt;
+&lt;p&gt;이미 존재하는 프로퍼티 키를 중복 선언하면 나중에 선언한 프로퍼티가 먼저 선언한 프로퍼티를 덮어쓴다. 이때 에러는 발생하지 않는다.&lt;/p&gt;
+&lt;h1 id=&quot;4-메서드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;4 메서드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 메서드&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var circle = {
+  radius: 5,
+  
+  getDiameter: function() {
+    return 2 * this.raduis;
+  }
+};&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;메서드 내부에서 사용한 this 키워드는 객체 자신을 가리키는 참조변수다.&lt;/p&gt;
+&lt;h1 id=&quot;5-프로퍼티-접근&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%EC%A0%91%EA%B7%BC&quot; aria-label=&quot;5 프로퍼티 접근 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. 프로퍼티 접근&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;마침표 프로퍼티 접근 연산자(.)를 사용하는 마침표 프로퍼티(dot notation)&lt;/li&gt;
+&lt;li&gt;대괄호 프로퍼티 접근 연산자([…])를 사용하는 마침표 프로퍼티(bracket notation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var person = {
+  name: &apos;Lee&apos;
+};
+
+console.log(person.name); // dot notation
+console.log(person[&apos;name&apos;]); // bracket notation&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;대괄호 프로퍼티 접근 연산자 내부에 지정하는 프로퍼티 키는 반드시 따옴표로 감싼 문자열이어야 한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;객체에 존재하지 않는 프로퍼티에 접근하면 undefined를 반환한다. 프로퍼티 키가 식별자 네이밍 규칙을 준수하지 않는 이름이면 반드시 대괄호표기법을 사용해야한다.&lt;/p&gt;
+&lt;h1 id=&quot;6-프로퍼티-동적-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#6-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%EB%8F%99%EC%A0%81-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;6 프로퍼티 동적 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;6. 프로퍼티 동적 생성&lt;/h1&gt;
+&lt;p&gt;존재하지 않는 프로퍼티에 값을 할당하면 프로퍼티가 동적으로 생성되어 추가되고 프로퍼티 값이 할당된다.&lt;/p&gt;
+&lt;h1 id=&quot;7-프로퍼티-삭제&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#7-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%EC%82%AD%EC%A0%9C&quot; aria-label=&quot;7 프로퍼티 삭제 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;7. 프로퍼티 삭제&lt;/h1&gt;
+&lt;p&gt;delete 연산자는 객체의 프로퍼티를 삭제한다. 이때 delete 연산자의 피연산자는 프로퍼티 값에 접근할 수 있는 표현식이어야 한다. 만약 존재하지 않는 프로퍼티를 삭제하면 아무런 에러없이 무시된다.&lt;/p&gt;
+&lt;h1 id=&quot;8-객체-리터럴의-확장기능&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#8-%EA%B0%9D%EC%B2%B4-%EB%A6%AC%ED%84%B0%EB%9F%B4%EC%9D%98-%ED%99%95%EC%9E%A5%EA%B8%B0%EB%8A%A5&quot; aria-label=&quot;8 객체 리터럴의 확장기능 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;8. 객체 리터럴의 확장기능&lt;/h1&gt;
+&lt;p&gt;ES6에서 더욱 간편하고 표현력 있는 객체 리터럴의 확장 기능을 제공한다.&lt;/p&gt;
+&lt;p&gt;ES6에서는 프로퍼티 값으로 변수를 사용하는 경우 변수이름과 프로퍼티 키가 동일한 이름일 때 프로퍼티 키를 생략할 수 있따.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;let x = 1, y = 2;
+
+const obj = { x, y}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;문자열 또는 문자열로 타입 변환할 수 있는 값으로 평가되는 표현식을 사용해 프로퍼티 키를 동적으로 생성할 수 도 있다. 단 프로퍼티 키로 사용할 표현식을 대괄호([…])로 묶어야 한다.&lt;/p&gt;
+&lt;p&gt;ES6에서는 메서드를 정의할 때 function키워드를 생략한 축약 표현을 사용할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const obj = {
+  name: &apos;Lee&apos;,
+
+  sayHi() {
+    console.log(&apos;Hi&apos; + this.name);
+  }
+};&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[09. 타입변환과 단축 평가]]></title><description><![CDATA[1. 타입변환이란 자바스크립트의 모든 값은 타입이 있다. 값의 타입은 개발자의 의도에 따라 다른 타입으로 변환할 수 있다. 개발자가 의도적으로 값의 타입을 변환하는 것을 명시적 타입변환(explict coercion) 또는 타입 캐스팅(type…]]></description><link>https://github.com/sangzun-han/자바스크립트/09.타입변환과 단축 평가/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/09.타입변환과 단축 평가/</guid><pubDate>Thu, 18 Nov 2021 08:30:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-타입변환이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%ED%83%80%EC%9E%85%EB%B3%80%ED%99%98%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;1 타입변환이란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 타입변환이란&lt;/h1&gt;
+&lt;p&gt;자바스크립트의 모든 값은 타입이 있다. 값의 타입은 개발자의 의도에 따라 다른 타입으로 변환할 수 있다. 개발자가 의도적으로 값의 타입을 변환하는 것을 &lt;strong&gt;명시적 타입변환(explict coercion) 또는 타입 캐스팅(type casting)&lt;/strong&gt;이라 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var x = 10;
+
+var str = x.toString();
+console.log(typeof str, str) // 변수x의 값이 변경된것은 아니다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;명시적 타입 변환이나 암묵적 타입 변환이 기존 원시값을 직접 변경하는 것은 아니다. &lt;strong&gt;원시 값은 변경 불가능한 값이므로 변경할 수 없다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var x= 10;
+var str = x + &apos;&apos;;
+console.log(typeof str, str); // string 10&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;자바스크립트 엔진은 x + ’ ‘을 평가하기 위해 x 변수의 숫자 값을 바탕으로 새로운 문자열 값 ‘10’을 생성하고 이것으로 표현식 ‘10’+ ’ ‘을 평가한다. 이때
+‘10’은 x변수에 재할당되지 않는다.&lt;/p&gt;
+&lt;p&gt;즉 암묵적 타입변환은 기존 변수 값을 재할당하여 변경하는 것이 아니다.&lt;/p&gt;
+&lt;h1 id=&quot;2-암묵적-타입-변환&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%95%94%EB%AC%B5%EC%A0%81-%ED%83%80%EC%9E%85-%EB%B3%80%ED%99%98&quot; aria-label=&quot;2 암묵적 타입 변환 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 암묵적 타입 변환&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&apos;10&apos; + 2 // &apos;102&apos;
+5 * &apos;10 // 50
+
+!0 // true
+if(1){}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;표현식을 평가할 때 코드의 문맥에 부합하지 않는 다양한 상황이 발생할 수 있다. 이때 자바스크립트는 가급적 에러를 발생시키지 않도록 암묵적 타입 변환을 통해 표현식을 평가한다.&lt;/p&gt;
+&lt;p&gt;자바스크립트 엔진은 boolean 타입이 아닌 값을 Truthy값 또는 Falsy값으로 구분한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Falsy로 평가되는 값
+- false
+- undefined
+- null
+- 0, -0
+- NaN
+- &apos;&apos;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;3-명시적-타입-변환&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EB%AA%85%EC%8B%9C%EC%A0%81-%ED%83%80%EC%9E%85-%EB%B3%80%ED%99%98&quot; aria-label=&quot;3 명시적 타입 변환 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 명시적 타입 변환&lt;/h1&gt;
+&lt;p&gt;개발자의 의도에 따라 명시적으로 타입을 변경하는 방법은 다양하다. 표준 빌트인 생성자 함수(String, Number, Boolean)를 new 연산자 없이 호출하는 방법과 빌트인 메서드를 사용하는 방법, 그리고 암묵적 타입 변환을 이용하는 방법이 있다.&lt;/p&gt;
+&lt;h3 id=&quot;표준-빌트인-생성자-함수와-빌트인-메서드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%91%9C%EC%A4%80-%EB%B9%8C%ED%8A%B8%EC%9D%B8-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98%EC%99%80-%EB%B9%8C%ED%8A%B8%EC%9D%B8-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;표준 빌트인 생성자 함수와 빌트인 메서드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;표준 빌트인 생성자 함수와 빌트인 메서드&lt;/h3&gt;
+&lt;p&gt;표준 빌트인 생성저 함수와 표준 빌트인 메서드는 자바스크립트에서 기본 제공하는 함수다. 표준 빌트인 생성자 함수는 객체를 생성하기 위한 함수이며 new 연산자와 함께 호출한다. 표준 빌트인 메서드는 자바스크립틍서 기본 제공하는 빌트인 객체의 메서드다.&lt;/p&gt;
+&lt;h3 id=&quot;3-1-문자열-타입으로-변환&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-1-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%83%80%EC%9E%85%EC%9C%BC%EB%A1%9C-%EB%B3%80%ED%99%98&quot; aria-label=&quot;3 1 문자열 타입으로 변환 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3-1. 문자열 타입으로 변환&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;String 생성자 함수를 new 연산자 없이 호출하는 방법&lt;/li&gt;
+&lt;li&gt;Object.prototypes.toString메서드를 사용하는 방법&lt;/li&gt;
+&lt;li&gt;문자열 연결 연산자를 이용하는 방법&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;3-2-숫자-타입으로-변환&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-2-%EC%88%AB%EC%9E%90-%ED%83%80%EC%9E%85%EC%9C%BC%EB%A1%9C-%EB%B3%80%ED%99%98&quot; aria-label=&quot;3 2 숫자 타입으로 변환 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3-2. 숫자 타입으로 변환&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Number 생성자 함수를 new 연산자 없이 호출하는 방법&lt;/li&gt;
+&lt;li&gt;parseInt parseFloat 함수를 사용하는 방법(문자열만 숫자타입으로 변환 가능)&lt;/li&gt;
+&lt;li&gt;+단항 산술 연산자를 이용하는 방법&lt;/li&gt;
+&lt;li&gt;*산술 연산자를 이용하는 방법&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;3-3-boolean-타입으로-변환&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-3-boolean-%ED%83%80%EC%9E%85%EC%9C%BC%EB%A1%9C-%EB%B3%80%ED%99%98&quot; aria-label=&quot;3 3 boolean 타입으로 변환 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3-3. boolean 타입으로 변환&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Boolean 생성자 함수를 new 연산자 없이 호출하는 방법&lt;/li&gt;
+&lt;li&gt;! 부정 논리 연산자를 두번 사용하는 방법&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;4-단축-평가&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-%EB%8B%A8%EC%B6%95-%ED%8F%89%EA%B0%80&quot; aria-label=&quot;4 단축 평가 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 단축 평가&lt;/h1&gt;
+&lt;p&gt;논리합 또는 논리곱 연산자 표현식의 평가값은 boolean값이 아닐 수 도 있다. 논리합 또는 논리곱 연산자 표현식은 언제나 2개의 피연산자중 어느 한쪽으로 평가된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&apos;Cat&apos; &amp;amp;&amp;amp; &apos;Dog&apos; // &apos;Dog&apos;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;논리곱 연산자는 두 개의 피연산자 모두 true로 평가될때 true를 반환한다.
+논리곱 연산자는 두번째 피연산자가 논리곱 연산자의 평가 결과를 반환한다.
+논리합 연산자도 논리곱 연산자와 동일하게 작용한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;이처럼 논리연산의 결과를 결정하는 피연산자를 타입 변환하지 않고 그대로 반환하는것을 단축평가(short-circuit evaluation)이라고 한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;단축평가를 사용하면 if문을 대체할 수 있다.&lt;/p&gt;
+&lt;p&gt;어떤 조건이 Truthy일 때 무언가를 해야한다면 논리곱을 조건이 Falsy일 때 무언가를 해야한다면 논리합을 이용할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var done = true;
+var message = &apos;&apos;;
+
+if (done) message =&apos;완료&apos;;
+
+message = done &amp;amp;&amp;amp; &apos;완료&apos;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;객체를-가리키기를-기대하는-변수가-null-또는-undefined가-아닌지-확인하기-프로퍼티를-참조할때&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4%EB%A5%BC-%EA%B0%80%EB%A6%AC%ED%82%A4%EA%B8%B0%EB%A5%BC-%EA%B8%B0%EB%8C%80%ED%95%98%EB%8A%94-%EB%B3%80%EC%88%98%EA%B0%80-null-%EB%98%90%EB%8A%94-undefined%EA%B0%80-%EC%95%84%EB%8B%8C%EC%A7%80-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%EB%A5%BC-%EC%B0%B8%EC%A1%B0%ED%95%A0%EB%95%8C&quot; aria-label=&quot;객체를 가리키기를 기대하는 변수가 null 또는 undefined가 아닌지 확인하기 프로퍼티를 참조할때 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;객체를 가리키기를 기대하는 변수가 null 또는 undefined가 아닌지 확인하기 프로퍼티를 참조할때&lt;/h3&gt;
+&lt;p&gt;객체는 키(key)와 값(value)으로 구성된 프로퍼티의 집합이다. 만약 객체를 가리키기를 기대하는 변수의 값이 객체가 아니라 null 또는 undefined인 경우 객체의 프로퍼티를 찾모하면 TypeError가 발생한다.&lt;/p&gt;
+&lt;p&gt;이때 단축평가를 사용하면 에러가 발생하지 않는다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var elem = null;
+
+var value = elem &amp;amp;&amp;amp; elem.value // null&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;함수-매개변수에-기본값을-설정할-때&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%95%A8%EC%88%98-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EC%97%90-%EA%B8%B0%EB%B3%B8%EA%B0%92%EC%9D%84-%EC%84%A4%EC%A0%95%ED%95%A0-%EB%95%8C&quot; aria-label=&quot;함수 매개변수에 기본값을 설정할 때 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;함수 매개변수에 기본값을 설정할 때&lt;/h2&gt;
+&lt;p&gt;함수를 호출할 때 인수를 전달하지 않으면 매개변수에는 undefined가 할당된다. 이 때 단축평가를 사용해 매개변수의 기본값을 설정하면 undefined로 인해 발생할 수 있는 에러를 방지할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function getStringLength(str) {
+  str = str || &apos;&apos;;
+  return str.length;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;4-1-옵셔널-체이닝-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-1-%EC%98%B5%EC%85%94%EB%84%90-%EC%B2%B4%EC%9D%B4%EB%8B%9D-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;4 1 옵셔널 체이닝 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4-1. 옵셔널 체이닝 연산자&lt;/h3&gt;
+&lt;p&gt;ES11에서 도입된 optional chaning 연산자 ?.는 좌항의 피연산자가 null 또는 undefined인 경우 undefined를 반환하고 그렇지 않으면 우항의 프로퍼티를 참조한다.&lt;/p&gt;
+&lt;p&gt;optional chaing 연산자는 좌항 피연산자가 false로 평가되는 Falsy값이라도 null 또는 undefined가 아니면 우항의 프로퍼티를 참조한다.&lt;/p&gt;
+&lt;h3 id=&quot;42-null-병합-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#42-null-%EB%B3%91%ED%95%A9-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;42 null 병합 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4.2 null 병합 연산자&lt;/h3&gt;
+&lt;p&gt;ES11에서 도입된 &lt;strong&gt;null 병합(nullish coalescing)&lt;/strong&gt; 연산자 ?? 는 좌항의 피연산자가 null 또는 undefined인 경우 우항의 피연산자를 반환하고 그렇지 않으면 좌항의 피연산자를 반환한다. &lt;strong&gt;변수에 기본값을 설정할 때 유용하다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var foo = null ?? &apos;default string&apos;;
+console.log(foo) // default string&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;좌항의 피연산자가 false로 평가되는 Falsy값이라도 null 또는 undefined가 아니면 좌항의 피연산자를 그대로 반환한다.&lt;/p&gt;
+&lt;p&gt;optional chaing, null coalescing 연산자가 도입되기 전에는 논리연산자 &amp;#x26;&amp;#x26;와 ||을 사용하여 변수가 null 또는 undefined인지 확인했다.&lt;/p&gt;
+&lt;p&gt;||를 사용한 단축평가의 경우 0이나 ”도 유효한 값이라면 예기치 않은 동작이 발생할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var elem = null;
+var value = elem &amp;amp;&amp;amp; elem.value;
+console.log(value) // null&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var foo = &apos;&apos; || &apos;defalut string&apos;;
+console.log(foo) // default string&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[interview]]></title><description><![CDATA[9. What is the difference between == and === operators JavaScript provides both strict(===, !==) and type-converting(==, !=) equality…]]></description><link>https://github.com/sangzun-han/INTERVIEW/interview/</link><guid isPermaLink="false">https://github.com/sangzun-han/INTERVIEW/interview/</guid><pubDate>Tue, 16 Nov 2021 15:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;9-what-is-the-difference-between--and--operators&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#9-what-is-the-difference-between--and--operators&quot; aria-label=&quot;9 what is the difference between  and  operators permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;9. What is the difference between == and === operators&lt;/h3&gt;
 &lt;p&gt;JavaScript provides both strict(===, !==) and type-converting(==, !=) equality comparison. &lt;/p&gt;
 &lt;p&gt;The strict operators take type of variable in consideration, while non-strict operators make type correction/conversion based upon values of variables. The strict operators follow the below conditions for different types,&lt;/p&gt;
 &lt;ul&gt;
@@ -25,7 +208,11 @@
 &lt;li&gt;boolean은 둘다 true 또는 둘다 false일때 같다.&lt;/li&gt;
 &lt;li&gt;null과 undefined타입은 ===로 비교할때 같지 않다 ==로 비교할때는 같다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;17-what-is-the-difference-between-let-and-var&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#17-what-is-the-difference-between-let-and-var&quot; aria-label=&quot;17 what is the difference between let and var permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;17. What is the difference between let and var&lt;/h3&gt;
+&lt;h3 id=&quot;17-what-is-the-purpose-of-the-let-keyword&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#17-what-is-the-purpose-of-the-let-keyword&quot; aria-label=&quot;17 what is the purpose of the let keyword permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;17. What is the purpose of the let keyword&lt;/h3&gt;
+&lt;p&gt;The let statement declares a block scope local variable. Hence the variables defined with let keyword are limited in scope to the block, statement, or expression on which it is used. Whereas variables declared with the var keyword used to define a variable globally, or locally to an entire function regardless of block scope&lt;/p&gt;
+&lt;p&gt;—해석—&lt;/p&gt;
+&lt;p&gt;let은 block scope 변수를 선언하는데 사용되는 키워드이다. 그러므로 block, statement, expression의 범위를 제한한다. 반면 var는 block scope에 상관없이 전역변수 또는 함수 전체의 지역변수로 정의된다. &lt;/p&gt;
+&lt;h3 id=&quot;18-what-is-the-difference-between-let-and-var&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#18-what-is-the-difference-between-let-and-var&quot; aria-label=&quot;18 what is the difference between let and var permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;18. What is the difference between let and var&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
