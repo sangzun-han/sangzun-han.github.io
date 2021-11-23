@@ -74,4 +74,14 @@ let은 block scope 변수를 선언하는데 사용되는 키워드이다. 그�
 |자바스크립트 초기부터 사용할 수 있었다.|ES6에서 도입되었다.|
 |function scope|block scope|
 |변수가 호이스팅 된다.|호이스팅 되지만 초기화는 되지 않는다.|
+
+### 25. What is Hoistring
+
+Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of thier scope before code execution. Remember that JavaScript only hoists declarations, not initialisation.
+
+--해석--
+
+코드를 실행하기 전에 변수나 함수를 가장 위로 올리는것을 호이스팅이라고 한다. 자바스크립느는 선언문을 호이스팅하며 초기화는 하지 않는다.
+
+
 <a href="https://github.com/sudheerj/javascript-interview-questions">질문 목록
