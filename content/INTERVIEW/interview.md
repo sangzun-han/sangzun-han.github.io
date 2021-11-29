@@ -81,7 +81,16 @@ Hoisting is a JavaScript mechanism where variables and function declarations are
 
 --해석--
 
-코드를 실행하기 전에 변수나 함수를 가장 위로 올리는것을 호이스팅이라고 한다. 자바스크립느는 선언문을 호이스팅하며 초기화는 하지 않는다.
+코드를 실행하기 전에 변수나 함수를 가장 위로 올리는것을 호이스팅이라고 한다. 자바스크립트는 선언문을 호이스팅하며 초기화는 하지 않는다.
 
 
 <a href="https://github.com/sudheerj/javascript-interview-questions">질문 목록
+
+
+### 73. What is null value
+
+The value null represents the intentional absence of any object value. it's one of JavaScript's primitive values. The type of null vaule is object. You can empty the variable by setting the value to null.
+
+--해석--
+
+null은 값을 의도적으로 없음을 나타낼때 사용하는 대표적인 값이다. js의 원시타입 값중 하나다. null은 object이다. 값을 null로 설정하여 변수를 빈 값으로 채울 수 있다.
