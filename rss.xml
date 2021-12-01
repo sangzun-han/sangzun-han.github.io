@@ -1,4 +1,180 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 30 Nov 2021 12:17:49 GMT</lastBuildDate><item><title><![CDATA[15. let, const 키워드와 블록 레벨 스코프]]></title><description><![CDATA[1. var 키워드의 문제점 변수 중복 선언 허용 함수 레벨 스코프 : var 키워드로 선언한 변수는 오로지 함수의 코드 블록만을 지역 스코프로 인정한다. 따라서 함수 외부에서 var…]]></description><link>https://github.com/sangzun-han/자바스크립트/15.let,const키워드와 블록레벨 스코프/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/15.let,const키워드와 블록레벨 스코프/</guid><pubDate>Tue, 30 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-var-키워드의-문제점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-var-%ED%82%A4%EC%9B%8C%EB%93%9C%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90&quot; aria-label=&quot;1 var 키워드의 문제점 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. var 키워드의 문제점&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 01 Dec 2021 22:07:02 GMT</lastBuildDate><item><title><![CDATA[16. 프로퍼티 어트리뷰트]]></title><description><![CDATA[1. 내부슬롯과 내부메소드 프로퍼티 어트리뷰트를 이해하기 위해서는 내부 슬롯(internal slot)과 내부 메서드(internal method…]]></description><link>https://github.com/sangzun-han/자바스크립트/16.프로퍼티 어트리뷰트/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/16.프로퍼티 어트리뷰트/</guid><pubDate>Wed, 01 Dec 2021 04:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-내부슬롯과-내부메소드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%82%B4%EB%B6%80%EC%8A%AC%EB%A1%AF%EA%B3%BC-%EB%82%B4%EB%B6%80%EB%A9%94%EC%86%8C%EB%93%9C&quot; aria-label=&quot;1 내부슬롯과 내부메소드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 내부슬롯과 내부메소드&lt;/h1&gt;
+&lt;p&gt;프로퍼티 어트리뷰트를 이해하기 위해서는 내부 슬롯(internal slot)과 내부 메서드(internal method)의 개념이 필요하다.&lt;/p&gt;
+&lt;p&gt;내부슬롯과 내부메서드는 자바스크립트 엔진의 구현 알고리즘을 설명하기 위해 ECMAScript 사양에서 사용하는 의사 프로퍼티와 의사메서드이다. 이중 대괄호로 감싼 이름들이 내부슬롯과 내부메서드이다.&lt;/p&gt;
+&lt;h1 id=&quot;2-프로퍼티-어트리뷰트와-프로퍼티-디스크립터-객체&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%EC%96%B4%ED%8A%B8%EB%A6%AC%EB%B7%B0%ED%8A%B8%EC%99%80-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%EB%94%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%84%B0-%EA%B0%9D%EC%B2%B4&quot; aria-label=&quot;2 프로퍼티 어트리뷰트와 프로퍼티 디스크립터 객체 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 프로퍼티 어트리뷰트와 프로퍼티 디스크립터 객체&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;자바스크립트 엔진은 프로퍼티를 생성할 때 프로퍼티의 상태를 나타내는 프로퍼티 어트리뷰트를 기본값으로 자동 정의한다.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;프로퍼티 어트리뷰트는 자바스크립트 엔진이 관리하는 내부상태 값이다. 따라서 직접 접근할 수 없지만 간접적으로 확인할 수 는 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const person = {
+  name: &apos;Lee&apos;,
+}
+
+console.log(Object.getOwnPropertyDescriptor(person, &apos;name&apos;))
+
+// {value: &apos;Lee&apos;, writable: true, enumerable: true, configurable: true}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;getOwnPropertyDescriptor 메서드는 프로퍼티 어트리뷰트 정보를 제공하는 &lt;strong&gt;&lt;em&gt;프로퍼티 디스크립터(PropertyDescriptor)&lt;/em&gt;&lt;/strong&gt;객체를 반환한다.&lt;/p&gt;
+&lt;h1 id=&quot;3-데이터-프로퍼티와-접근자-프로퍼티&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%EC%99%80-%EC%A0%91%EA%B7%BC%EC%9E%90-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0&quot; aria-label=&quot;3 데이터 프로퍼티와 접근자 프로퍼티 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 데이터 프로퍼티와 접근자 프로퍼티&lt;/h1&gt;
+&lt;p&gt;데이터 프로퍼티 : 키와 값으로 구성된 프러퍼티&lt;/p&gt;
+&lt;p&gt;접근자 프로퍼티 : 자체적으로 값을 갖지 않고 프로퍼티의 값을 읽거나 저장할 때 호출되는 접근자 함수로 구성된 프로퍼티&lt;/p&gt;
+&lt;h3 id=&quot;3-1-데이터-프로퍼티&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0&quot; aria-label=&quot;3 1 데이터 프로퍼티 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3-1. 데이터 프로퍼티&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;프로퍼티 어트리뷰트&lt;/th&gt;
+&lt;th&gt;프로퍼티 디스크립터 객체의 프로퍼티&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[[Value]]&lt;/td&gt;
+&lt;td&gt;value&lt;/td&gt;
+&lt;td&gt;프로퍼티 값의 변경 가능 여부를 나타내며 boolean 값을 갖는다&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[[Writable]]]&lt;/td&gt;
+&lt;td&gt;writable&lt;/td&gt;
+&lt;td&gt;프로퍼티 키를 통해 프로퍼티 값에 접근하면 반한되는 값&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[[Enumerable]]&lt;/td&gt;
+&lt;td&gt;enumrable&lt;/td&gt;
+&lt;td&gt;프로퍼티의 열거 가능 여부를 나타내며 boolean 값을 갖는다&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[[Configurable]]&lt;/td&gt;
+&lt;td&gt;configurable&lt;/td&gt;
+&lt;td&gt;프로퍼티의 재정의 가능 여부를 나타낸다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;32-접근자-프로퍼티&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#32-%EC%A0%91%EA%B7%BC%EC%9E%90-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0&quot; aria-label=&quot;32 접근자 프로퍼티 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3.2 접근자 프로퍼티&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;프로퍼티 어트리뷰트&lt;/th&gt;
+&lt;th&gt;프로퍼티 디스크립터 객체의 프로퍼티&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[[Get]]&lt;/td&gt;
+&lt;td&gt;get&lt;/td&gt;
+&lt;td&gt;접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 읽을 때 호출되는 접근자 함수&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[[Set]]]&lt;/td&gt;
+&lt;td&gt;set&lt;/td&gt;
+&lt;td&gt;접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 저장할 때 호출되는 접근자 함수&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[[Enumerable]]&lt;/td&gt;
+&lt;td&gt;enumrable&lt;/td&gt;
+&lt;td&gt;프로퍼티의 열거 가능 여부를 나타내며 boolean 값을 갖는다&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[[Configurable]]&lt;/td&gt;
+&lt;td&gt;configurable&lt;/td&gt;
+&lt;td&gt;프로퍼티의 재정의 가능 여부를 나타낸다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const person = {
+  firstName: &apos;Han&apos;,
+  lastName: &apos;sangjun&apos;,
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+
+  set fullName(name) {
+    [this.firstName, this.lastName] = name.split(&apos; &apos;);
+  }
+};&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;console.log(person.firstName + &apos; &apos; + person.lastName) //Han sangjun
+person.fullName = &quot;Heegun Lee&quot; // set함수 실행
+
+let descriptor = Object.getOwnPropertyDescriptor(person, &apos;firstName&apos;)
+console.log(descriptor)
+
+//
+  {value: &apos;Heegun&apos;, writable: true, enumerable: true, configurable: true} 
+//
+
+let descriptor = Object.getOwnPropertyDescriptor(person, &apos;fullName&apos;)
+console.log(descriptor)
+
+//
+  {enumerable: true, configurable: true, get: ƒ, set: ƒ}
+//&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;4-프로퍼티-정의&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%EC%A0%95%EC%9D%98&quot; aria-label=&quot;4 프로퍼티 정의 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 프로퍼티 정의&lt;/h1&gt;
+&lt;p&gt;Object.defineProperty 메서드를 사용하여 프로퍼티 어트리뷰트를 정의할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Object.defineProperty(person, &apos;firstName&apos; , {
+  value: &quot;~~~&quot;,
+  writable: true of false,
+  enumerable: true of false,
+  configurable: true of false,
+})&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;프로퍼티 디스크립터 객체의 프로퍼티&lt;/th&gt;
+&lt;th&gt;대응하는 프로퍼티 어트리뷰트&lt;/th&gt;
+&lt;th&gt;생략했을 때 기본 값&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;value&lt;/td&gt;
+&lt;td&gt;[[Value]]&lt;/td&gt;
+&lt;td&gt;undefined&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;get&lt;/td&gt;
+&lt;td&gt;[[Get]]&lt;/td&gt;
+&lt;td&gt;undefined&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set&lt;/td&gt;
+&lt;td&gt;[[Set]]&lt;/td&gt;
+&lt;td&gt;undefined&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;writable&lt;/td&gt;
+&lt;td&gt;[[Writable]]&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;enumerable&lt;/td&gt;
+&lt;td&gt;[[Enumerable]]&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;configurable&lt;/td&gt;
+&lt;td&gt;[[Configurable]]&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Object.defineProperties 메서드를 사용하면 여러개의 프로퍼티를 한 번에 정의할 수 있다.&lt;/p&gt;
+&lt;h1 id=&quot;5-객체-변경감지&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-%EA%B0%9D%EC%B2%B4-%EB%B3%80%EA%B2%BD%EA%B0%90%EC%A7%80&quot; aria-label=&quot;5 객체 변경감지 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. 객체 변경감지&lt;/h1&gt;
+&lt;p&gt;객체는 변경 가능한 값이므로 재할당 없이 직접 변경할 수 있다. 프로퍼티를 추가하거나 삭제할 수 있고 프로퍼티 값을 갱신할 수 있으며 프로퍼티 어트리뷰트를 재정의 할 수 있다.&lt;/p&gt;
+&lt;h3 id=&quot;5-1-객체-확장-금지&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-1-%EA%B0%9D%EC%B2%B4-%ED%99%95%EC%9E%A5-%EA%B8%88%EC%A7%80&quot; aria-label=&quot;5 1 객체 확장 금지 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5-1. 객체 확장 금지&lt;/h3&gt;
+&lt;p&gt;Object.perventExtensions 메서드는 객체의 확장을 금지한다. &lt;strong&gt;&lt;em&gt;객체 확장 금지&lt;/em&gt;&lt;/strong&gt;란 프로퍼티 추가 금지를 의미힌다.&lt;/p&gt;
+&lt;h3 id=&quot;5-2-객체-밀봉&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-2-%EA%B0%9D%EC%B2%B4-%EB%B0%80%EB%B4%89&quot; aria-label=&quot;5 2 객체 밀봉 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5-2. 객체 밀봉&lt;/h3&gt;
+&lt;p&gt;Object.seal 메서드는 객체를 밀봉한다. &lt;strong&gt;&lt;em&gt;밀봉된 객체는 읽기와 쓰기만 가능하다.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;5-3-객체-동결&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-3-%EA%B0%9D%EC%B2%B4-%EB%8F%99%EA%B2%B0&quot; aria-label=&quot;5 3 객체 동결 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5-3 객체 동결&lt;/h3&gt;
+&lt;p&gt;Object.freeze 메서드는 객체를 동결한다. &lt;strong&gt;&lt;em&gt;객체 동결&lt;/em&gt;&lt;/strong&gt;이란 프로퍼티 추가 및 삭제와 프로퍼티 어트리뷰트 재정의 금지, 프로퍼티 값 갱신 금지를 의미한다. 즉 &lt;strong&gt;&lt;em&gt;동결된 객체는 읽기만 가능하다.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;5-4-불변-객체&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-4-%EB%B6%88%EB%B3%80-%EA%B0%9D%EC%B2%B4&quot; aria-label=&quot;5 4 불변 객체 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5-4. 불변 객체&lt;/h3&gt;
+&lt;p&gt;중첩 객체는 Object.freeze 메서드로 객체를 동결해도 동결할 수 없다.&lt;/p&gt;
+&lt;p&gt;따라서 객체의 중첩객체 까지 동결하기 위해서는 모든 프로퍼티에 대해 재귀적으로 Object.freeze 메서드를 호출해야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function deepFreeze(target) {
+  if(target &amp;amp;&amp;amp; typeof target === &apos;object&apos; &amp;amp;&amp;amp; !Object.isFrozen(target)) {
+    Object.freeze(target)
+    Object.keys(target).forEach(key =&gt; deepFrreze(target[key]))
+  }
+  return target;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[15. let, const 키워드와 블록 레벨 스코프]]></title><description><![CDATA[1. var 키워드의 문제점 변수 중복 선언 허용 함수 레벨 스코프 : var 키워드로 선언한 변수는 오로지 함수의 코드 블록만을 지역 스코프로 인정한다. 따라서 함수 외부에서 var…]]></description><link>https://github.com/sangzun-han/자바스크립트/15.let,const키워드와 블록레벨 스코프/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/15.let,const키워드와 블록레벨 스코프/</guid><pubDate>Tue, 30 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-var-키워드의-문제점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-var-%ED%82%A4%EC%9B%8C%EB%93%9C%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90&quot; aria-label=&quot;1 var 키워드의 문제점 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. var 키워드의 문제점&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;변수 중복 선언 허용&lt;/li&gt;
 &lt;li&gt;함수 레벨 스코프 : var 키워드로 선언한 변수는 오로지 함수의 코드 블록만을 지역 스코프로 인정한다. 따라서 함수 외부에서 var 키워드로 선언한 변수는 코드 블록 내에서 선언해도 모두 전역 변수가 된다.&lt;/li&gt;
