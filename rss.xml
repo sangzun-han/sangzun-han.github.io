@@ -1,9 +1,143 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 11 Dec 2021 07:37:06 GMT</lastBuildDate><item><title><![CDATA[21. 빌트인 객체]]></title><description><![CDATA[1. 자바스크립트 객체의 분류 자바스크립트 객체는 크게 3개의 객체로 분류할 수 있다. 표준 빌트인 객체(standard built-in objects/native objects/global objects) 표준 빌트인 객체는 ECMAScript…]]></description><link>https://github.com/sangzun-han/자바스크립트/21.빌트인 객체/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/21.빌트인 객체/</guid><pubDate>Sat, 11 Dec 2021 07:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-자바스크립트-객체의-분류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B0%9D%EC%B2%B4%EC%9D%98-%EB%B6%84%EB%A5%98&quot; aria-label=&quot;1 자바스크립트 객체의 분류 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 자바스크립트 객체의 분류&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 14 Dec 2021 09:35:24 GMT</lastBuildDate><item><title><![CDATA[23.실행 컨텍스트]]></title><description><![CDATA[실행컨택스트(execution context) 자바스크립트의 원리를 담고 있는 핵심 개념이다. 1. 소스코드의타입 실행컨텍스트는 다음과 같은 것들을 이용하면 execution context stack에 쌓이게된다. executionstack…]]></description><link>https://github.com/sangzun-han/자바스크립트/23.실행컨텍스트/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/23.실행컨텍스트/</guid><pubDate>Tue, 14 Dec 2021 14:00:00 GMT</pubDate><content:encoded>&lt;p&gt;실행컨택스트(execution context) 자바스크립트의 원리를 담고 있는 핵심 개념이다.&lt;/p&gt;
+&lt;h1 id=&quot;1-소스코드의타입&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C%EC%9D%98%ED%83%80%EC%9E%85&quot; aria-label=&quot;1 소스코드의타입 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 소스코드의타입&lt;/h1&gt;
+&lt;p&gt;실행컨텍스트는 다음과 같은 것들을 이용하면 execution context stack에 쌓이게된다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/executionstack.png&quot; alt=&quot;executionstack&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;전역코드&lt;/li&gt;
+&lt;li&gt;함수코드&lt;/li&gt;
+&lt;li&gt;eval 코드&lt;/li&gt;
+&lt;li&gt;모듈 코드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;2-렉시컬-환경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EB%A0%89%EC%8B%9C%EC%BB%AC-%ED%99%98%EA%B2%BD&quot; aria-label=&quot;2 렉시컬 환경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 렉시컬 환경&lt;/h1&gt;
+&lt;p&gt;렉시컬 환경(Lexical Environment)은 식별자와 식별자에 바인딩된 값, 상위스코프에 대한 참조를 기록하는 자료구조이다.&lt;/p&gt;
+&lt;p&gt;Lexical environmet는 EnvirenmetRecore와 OuterLexicalEnvironmentReference로 구성된다&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;환경레코드(Environment Recode)&lt;/em&gt;&lt;/strong&gt; : 스코프에 포함된 식별자를 등록하고 등록된 식별자에 바인딩된 값을 관리하는 저장소&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;외부 렉시컬 환경에 대한 참조(OuterLexicalEnvironmentReference)&lt;/em&gt;&lt;/strong&gt;: 외부 렉시컬 환경에 대한 참조는 상위 스코프를 가리킨다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/executioncontext.jpg&quot; alt=&quot;executioncontext&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-1-environment-recode&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-1-environment-recode&quot; aria-label=&quot;2 1 environment recode permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-1. Environment Recode&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;(Environment Recode)&lt;/em&gt;&lt;/strong&gt;에는 객체 환경 레코드(Object Environment Record)와 선언적 환경 레코드(Declarative Environment Record)로 구성되어 있다.&lt;/p&gt;
+&lt;p&gt;Object Environment Record에는 var로 선언된 전역변수 전역함수, 빌트인 전역 프로퍼티와 전역함수,객체를 관리하고 Declarative Environment Record는 let, const 키워드로 선언한 전역 변수를 관리한다.&lt;/p&gt;
+&lt;p&gt;전역 코드 평가 과정에서 var로 선언한 전역 변수와 함수 선언문으로 정의된 전역 함수는 Object Environment Record에 연결된 BindingObject를 통해 전역 객체의 프로퍼티와 메서드가 된다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Object%20Environment%20Record.jpg&quot; alt=&quot;ObjectEnvironmentRecord&quot;&gt;&lt;/p&gt;
+&lt;p&gt;따러서 var 키워드로 선언한 변수는 코드 실행 단계에서 변수 선언문 이전에도 참조할 수 있다.&lt;/p&gt;
+&lt;p&gt;let,const 키워드로 선언한 전역 변수는 전역 객체의 프로퍼티가 되지 않기 때문에 전역 객체의 프로퍼티로서 참조할 수 없다. 따라서 런타임에 실행 흐름이 변수 선언문에 도달하기 전까지 &lt;strong&gt;&lt;em&gt;TDZ&lt;/em&gt;&lt;/strong&gt;에 빠지게 된다.&lt;/p&gt;
+&lt;p&gt;Global Environmnet Record에 [[GlobalThisValue]] 내부 슬롯에 this가 바인딩된다.&lt;/p&gt;
+&lt;h3 id=&quot;2-2outerlexicalenvironmentreference&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-2outerlexicalenvironmentreference&quot; aria-label=&quot;2 2outerlexicalenvironmentreference permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-2.OuterLexicalEnvironmentReference&lt;/h3&gt;
+&lt;p&gt;Outer LexicalEnvironment Reference는 현재 평가중인 소스코드를 포함하는 외부 소스코드의 상위 스코프를 가리킨다.&lt;/p&gt;
+&lt;h1 id=&quot;3-요약&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EC%9A%94%EC%95%BD&quot; aria-label=&quot;3 요약 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 요약&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;자바스크립트 엔진이 코드를 실행시킬때 Execution Context라는 실행 가능한 환경을 만들고 Execution Context를 기준으로 코드를 실행한다.&lt;/li&gt;
+&lt;li&gt;전역에서 생성되는 global execution context와 함수 실행 코드를 만나면 생성되는 function execution context가 있다.&lt;/li&gt;
+&lt;li&gt;생성단계일 때 Lexical Environmet를 생성한다. 이때 Lexical Environemt에는 스코프의 변수와 함수를 선언한다.&lt;/li&gt;
+&lt;li&gt;실행단계일 때 스크립트를 읽으며 생성한 Lexical Environemt에 할당 및 코드를 실행한다.&lt;/li&gt;
+&lt;li&gt;Execution statck이 빌 때 까지 위의 동작을 반복한다.&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[22.this]]></title><description><![CDATA[1. this 키워드 메서드는 프로퍼티를 참조하고 변경할 수 있어야 한다. 이 때 메서드가 자신이 속한 객체의 프로퍼티를 참조하려면 자신이 속한 객체를 가리키는 식별자를 참조할 수 있어야 한다. this…]]></description><link>https://github.com/sangzun-han/자바스크립트/22. this 키워드/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/22. this 키워드/</guid><pubDate>Mon, 13 Dec 2021 14:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-this-키워드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-this-%ED%82%A4%EC%9B%8C%EB%93%9C&quot; aria-label=&quot;1 this 키워드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. this 키워드&lt;/h1&gt;
+&lt;p&gt;메서드는 프로퍼티를 참조하고 변경할 수 있어야 한다. 이 때 메서드가 자신이 속한 객체의 프로퍼티를 참조하려면 자신이 속한 객체를 가리키는 식별자를 참조할 수 있어야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;this는 자신이 속한 객체 또는 자신이 생성할 인스턴스를 가리키는 자기 참조 변수(self-referencing variable)다. this를 통해 자신이 속한 객체 또는 자신이 생성할 인스턴스의 프로퍼티나 메서드를 참조할 수 있다.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;this 바인딩 : 바인딩이랑 식별자와 값을 연결하는 과정을 의미한다. this 바인딩은 this가 가리킬 객체를 바인딩 한다. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// 생성자 함수
+function Circle(radius) {
+  this.radius = radius;
+}
+
+Circle.prototype.getDiameter = function () {
+  return 2 * this.radius;
+};
+
+// 인스턴스 생성
+const circle = new Circle(15);
+console.log(circle.getDiameter()); // 30&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;객체 리터럴의 메서드 내부에서의 this는 메서드를 호출한 객체, 즉 circle을 가리킨다. &lt;/p&gt;
+&lt;p&gt;생성자 함수 내부의 this는 생성자 함수가 생성할 인스턴스를 가리킨다. this는 상황에 따라 가리키는 대상이 다르다.&lt;/p&gt;
+&lt;p&gt;자바스크립트의 this는 함수가 호출되는 방식에 따라 this 바인딩이 동적으로 결정된다. 또한 strict mode는 this 바인딩에 영향을 준다.&lt;/p&gt;
+&lt;h1 id=&quot;2-함수-호출-방식과-this-바인딩&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%ED%95%A8%EC%88%98-%ED%98%B8%EC%B6%9C-%EB%B0%A9%EC%8B%9D%EA%B3%BC-this-%EB%B0%94%EC%9D%B8%EB%94%A9&quot; aria-label=&quot;2 함수 호출 방식과 this 바인딩 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 함수 호출 방식과 this 바인딩&lt;/h1&gt;
+&lt;h3 id=&quot;2-1-일반-함수-호출&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-1-%EC%9D%BC%EB%B0%98-%ED%95%A8%EC%88%98-%ED%98%B8%EC%B6%9C&quot; aria-label=&quot;2 1 일반 함수 호출 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-1. 일반 함수 호출&lt;/h3&gt;
+&lt;p&gt;기본적으로 this에는 전역 객체가 바인딩된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function foo() {
+	console.log(this) // undefined
+	function bar() {
+		console.log(this) // undefined
+	}
+	bar()
+}
+foo()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;중첩함수를 일반 함수로 호출하면 함수 내부의 this에는 전역객체가 바인됭된다. strict mode가 적용된 일반 함수 내부에는 undefined가 바인딩된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;메서드 내부의 중첩함수나 콜백함수의 this 바인딩을 메서드의 this 바인딩과 일치시키는 방법&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const obj = {
+  value: 100,
+  foo() {
+    const that = this;
+
+    setTimeout(function () {
+      console.log(that.value);
+    }, 1000);
+  },
+};
+
+obj.foo();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;2-2-메서드-호출&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-2-%EB%A9%94%EC%84%9C%EB%93%9C-%ED%98%B8%EC%B6%9C&quot; aria-label=&quot;2 2 메서드 호출 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-2. 메서드 호출&lt;/h3&gt;
+&lt;p&gt;메서드 내부의 this에는 메서드를 호출한 객체가 바인딩 된다. 메서드 내부의 this는 메서드를 소유한 객체가 아닌 메서드를 호출한 객체가 바인딩 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const person = {
+  name: &quot;Lee&quot;,
+  getName() {
+    return this.name;
+  },
+};
+
+console.log(person.getName());&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const anotherPerson = {
+  name: &quot;Kim&quot;,
+};
+
+anotherPerson.getName = person.getName;
+
+console.log(anotherPerson.getName()); // kim
+
+const getName = person.getName;
+console.log(getName()); // 일반 함수로 호출된 getName 함수는  내부의 this.name은 window.name과 같다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;2-3-생성자-함수-호출&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-3-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98-%ED%98%B8%EC%B6%9C&quot; aria-label=&quot;2 3 생성자 함수 호출 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-3. 생성자 함수 호출&lt;/h3&gt;
+&lt;p&gt;생성자 함수 내부의 this에는 생성자 함수가 생성할 인스턴스가 바인딩된다.&lt;/p&gt;
+&lt;h3 id=&quot;2-4-functionprototypeapplycallbind&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-4-functionprototypeapplycallbind&quot; aria-label=&quot;2 4 functionprototypeapplycallbind permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-4. Function.prototype.apply/call/bind&lt;/h3&gt;
+&lt;p&gt;apply,call,bind 메서드는 Function.prototype의 메서드다. 따라서 이 메서드들은 모든 함수가 상속받아 사용할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function getThisBinding() {
+  return this;
+}
+
+const thisArg = { a: 1 };
+
+console.log(getThisBinding()); // window
+
+console.log(getThisBinding.apply(thisArg)); // {a:1}
+console.log(getThisBinding.call(thisArg)); // {a:1}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;apply와 call 메서드는 함수를 호출하는 것이다. apply와 call 메서드는 함수를 호출하면서 첫 번째 인수로 전달한 특정 객체를 호출한 함수의 this에 바인딩한다. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function getThisBinding() {
+  console.log(arguments);
+  return this;
+}
+
+const thisArg = { a: 1 };
+
+console.log(getThisBinding());
+
+console.log(getThisBinding.apply(thisArg, [1, 2, 3]));
+console.log(getThisBinding.call(thisArg, 1, 2, 3));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;apply 메서드는 호출할 함수의 인수를 배열로 묶어 전달한다. call 메서드는 호출할 함수의 인수를 쉼표로 구분한 리스트로 전달한다.&lt;/p&gt;
+&lt;p&gt;Function.prototype.bind 메서드는 apply와 call 메서드와 달리 함수를 호출하지 않고 this로 사용할 객체만 전달한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function getThisBinding() {
+  return this;
+}
+
+const thisArg = { a: 1 };
+
+console.log(getThisBinding.bind(thisArg));
+console.log(getThisBinding.bind(thisArg)()); // 명시적으로 호출&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[21. 빌트인 객체]]></title><description><![CDATA[1. 자바스크립트 객체의 분류 자바스크립트 객체는 크게 3개의 객체로 분류할 수 있다. 표준 빌트인 객체(standard built-in objects/native objects/global objects) 표준 빌트인 객체는 ECMAScript…]]></description><link>https://github.com/sangzun-han/자바스크립트/21.빌트인 객체/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/21.빌트인 객체/</guid><pubDate>Sat, 11 Dec 2021 07:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-자바스크립트-객체의-분류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B0%9D%EC%B2%B4%EC%9D%98-%EB%B6%84%EB%A5%98&quot; aria-label=&quot;1 자바스크립트 객체의 분류 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 자바스크립트 객체의 분류&lt;/h1&gt;
 &lt;p&gt;자바스크립트 객체는 크게 3개의 객체로 분류할 수 있다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;표준 빌트인 객체(standard built-in objects/native objects/global objects)&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;표준 빌트인 객체는 ECMAScript 사양에 정의된 객체를 말하며 자바스크립트 싷행 환경과 관계없이 언제나 사용할수 있다. 별도의 선언 없이 전역 변수처럼 언제나 참조 할 수 있다.&lt;/p&gt;
+&lt;p&gt;표준 빌트인 객체는 ECMAScript 사양에 정의된 객체를 말하며 자바스크립트 실행 환경과 관계없이 언제나 사용할수 있다. 별도의 선언 없이 전역 변수처럼 언제나 참조 할 수 있다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;호스트 객체(host objects)&lt;/li&gt;
 &lt;/ul&gt;
