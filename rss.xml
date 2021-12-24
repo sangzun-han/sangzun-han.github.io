@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 22 Dec 2021 12:00:52 GMT</lastBuildDate><item><title><![CDATA[27. 배열]]></title><description><![CDATA[1. 배열 배열은 여러 개의 값을 순차적으로 나열한 자료구조이다. 배열은 읻게스와 length 프로퍼티를 갖기 때문에 for문을 통해 순차적으로 접근할 수 있다. 배열은 객체 타입이다. 배열 리터럴, Array 생성자 함수, Array.of…]]></description><link>https://github.com/sangzun-han/자바스크립트/27.배열/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/27.배열/</guid><pubDate>Tue, 21 Dec 2021 03:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-배열&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;1 배열 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 배열&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Dec 2021 02:17:43 GMT</lastBuildDate><item><title><![CDATA[28. Number]]></title><description><![CDATA[1. Number 생성자 함수 표준 빌트인 객체인 Number 객체는 생성자 함수 객체다. 따라서 new 연산자와 함께 Number 인스턴스를 생성할 수 있다. Number 생성자 함수에 인수를 전달하지 않고 new…]]></description><link>https://github.com/sangzun-han/자바스크립트/28.Number/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/28.Number/</guid><pubDate>Fri, 24 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-number-생성자-함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-number-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98&quot; aria-label=&quot;1 number 생성자 함수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Number 생성자 함수&lt;/h1&gt;
+&lt;p&gt;표준 빌트인 객체인 Number 객체는 생성자 함수 객체다. 따라서 new 연산자와 함께 Number 인스턴스를 생성할 수 있다.&lt;/p&gt;
+&lt;p&gt;Number 생성자 함수에 인수를 전달하지 않고 new 연산자와 함께 호출하면 [[NumberData]] 내부슬롯에 0을 할당한 Number 래퍼 객체를 생성한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const numObj = new Number();
+console.log(numObj); // Number {0}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Number 생성자 함수에 숫자가 아닌 값을 전달하면 강제로 숫자로 변환하고 숫자로 변환할 수 없다면 NaN을 내부슬롯에 할당한 Number 래퍼 객체를 생성한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Number(&apos;0&apos;); // 0
+Number(&apos;10.53&apos;); // 10.53
+Number(true); // 1
+Number(&apos;aaa&apos;); // NaN&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;2-number-프로퍼티&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-number-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0&quot; aria-label=&quot;2 number 프로퍼티 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. Number 프로퍼티&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Number.EPSILON : EPSILON은 1과 1보다 큰 숫자 중에서 가장 작은 숫자와의 차이와 같다.
+EPSILON은 부동소수점으로 인해 발생하는 오차를 해결하기 위해 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;0.1 + 0.2; // 0.30000000000000004
+0.1 + 0.2 === 0.3 // false
+
+function isEqual(a,b) {
+  return Math.abs(a-b) &amp;lt; Number.EPSILON;
+}
+
+isEqual(0.1+0.2, 0.3); // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Number.MAX_VALUE : 자바스크립트에서 표현할 수 있는 가장 큰 양수값&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Infinity &gt; Number.MAX_VALUE // ture&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Number.MIN_VALUE : 자바스크립트에서 표현할 수 있는 가장 작은 양수값&lt;/li&gt;
+&lt;li&gt;Number.MAX_ SAFE_ INTEGER : 자바스크립트에서 안전하게 표현할 수 있는 가장 큰 정수값&lt;/li&gt;
+&lt;li&gt;Number.MIN_ SAFE_ INTEGER : 자바스크립트에서 안전하게 표현할 수 있는 가장 작은 정수값&lt;/li&gt;
+&lt;li&gt;Number.POSITIVE_INFINITY&lt;/li&gt;
+&lt;li&gt;Number.NEGATIVE_INFINITY&lt;/li&gt;
+&lt;li&gt;Number.NaN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;3-number-메서드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-number-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;3 number 메서드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. Number 메서드&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Number.isFinite : 인수로 전달된 값이 유한수라면 true 아니라면 false 빌트인 전역함수 isFinite와는 차이가 있다.
+전역함수 isFinite는 전달받은 인수를 숫자로 암묵적 타입 변환하여 검사를 수행하지만 Number.isFinite는 전달받은 인수를 숫자로 암묵적 타입 변환 하지 않는다.&lt;/li&gt;
+&lt;li&gt;Number.isNaN : 암묵적 타입변환 하지 않는다.&lt;/li&gt;
+&lt;li&gt;Number.isSafeInter : 암묵적 타입변환 하지 않는다.&lt;/li&gt;
+&lt;li&gt;Number.prototype.toExponetial : 숫자를 지수 표기법으로 변환하여 문자열로 반환한다. &lt;strong&gt;&lt;em&gt;숫자 리터럴과 함께 사용할 경우 에러가 발생한다.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;77.toExpoential(); // Syntax Error
+(77).toExpoential(); // 7.7e+1
+77 .toExpoential(); // 7.7e+1 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Number.prototype.toFixed : 숫자를 반올림하여 문자열로 반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(123456.789).toFixed(); // 123457
+(123456.789).toFixed(1); // 소수점 이하 1자리까지 유효, 나머지 반올림123456.8 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Number.prototype.toPrecision() : 인수로 전달받은 전체자릿수까지 유효하도록 나머지 자릿수를 반올림하여 문자열로 반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(12345.6789).toPrecision(); // 12345.6789
+(12345.6789).toPrecision(1); // 전체 1자릿수 유효, 나머지 반올림 1e+4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Number.prototype.toString() : 숫자를 문자열로 반환한다. 진법을 나타내는 2~36사이의 정수값을 인자로 전달할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[27. 배열]]></title><description><![CDATA[1. 배열 배열은 여러 개의 값을 순차적으로 나열한 자료구조이다. 배열은 읻게스와 length 프로퍼티를 갖기 때문에 for문을 통해 순차적으로 접근할 수 있다. 배열은 객체 타입이다. 배열 리터럴, Array 생성자 함수, Array.of…]]></description><link>https://github.com/sangzun-han/자바스크립트/27.배열/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/27.배열/</guid><pubDate>Tue, 21 Dec 2021 03:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-배열&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;1 배열 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 배열&lt;/h1&gt;
 &lt;p&gt;배열은 여러 개의 값을 순차적으로 나열한 자료구조이다. 배열은 읻게스와 length 프로퍼티를 갖기 때문에 for문을 통해 순차적으로 접근할 수 있다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];
 for (let i=0; i &amp;lt; arr.length; i++) {
