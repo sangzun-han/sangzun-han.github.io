@@ -1,4 +1,338 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Dec 2021 02:17:43 GMT</lastBuildDate><item><title><![CDATA[28. Number]]></title><description><![CDATA[1. Number 생성자 함수 표준 빌트인 객체인 Number 객체는 생성자 함수 객체다. 따라서 new 연산자와 함께 Number 인스턴스를 생성할 수 있다. Number 생성자 함수에 인수를 전달하지 않고 new…]]></description><link>https://github.com/sangzun-han/자바스크립트/28.Number/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/28.Number/</guid><pubDate>Fri, 24 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-number-생성자-함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-number-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98&quot; aria-label=&quot;1 number 생성자 함수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Number 생성자 함수&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 17 Jan 2022 10:53:00 GMT</lastBuildDate><item><title><![CDATA[32. String]]></title><description><![CDATA[1. String 생성자 함수 표준 빌트인 객체인 String 객체는 생성자 함수 객체다. new 연산자와 함께 호출하여 String 인스턴스를 생성할 수 있다. String 생성자 함수에 인수를 전달하지 않고 new…]]></description><link>https://github.com/sangzun-han/자바스크립트/32.String/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/32.String/</guid><pubDate>Thu, 06 Jan 2022 13:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-string-생성자-함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-string-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98&quot; aria-label=&quot;1 string 생성자 함수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. String 생성자 함수&lt;/h1&gt;
+&lt;p&gt;표준 빌트인 객체인 String 객체는 생성자 함수 객체다. new 연산자와 함께 호출하여 String 인스턴스를 생성할 수 있다.&lt;/p&gt;
+&lt;p&gt;String 생성자 함수에 인수를 전달하지 않고 new 연산자와 함께 호출하면 [[StringData]] 내부 슬롯에 빈 문자열을 할당한 String 래퍼 객체를 생성한다.&lt;/p&gt;
+&lt;p&gt;인수를 전달하면 [[StringData]] 내부 슬롯에 인수로 전달받은 문자열을 할당한 String 래퍼 객체를 생성한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const strObj = new String(&apos;Han&apos;);
+console.log(strObj);
+
+// String {&apos;Han&apos;} 0: &quot;H&quot; 1: &quot;a&quot; 2: &quot;n&quot; length: 3 [[PrimitiveValue]]: &quot;Han&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;String 래퍼 객체는 유사 배열 객체이면서 이터러벌이다. 따라서 인덱스를 사용하여 각 문자에 접근할 수 있다.&lt;/p&gt;
+&lt;h1 id=&quot;2-length-프로퍼티&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-length-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0&quot; aria-label=&quot;2 length 프로퍼티 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. length 프로퍼티&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;lenght&lt;/code&gt; 프로퍼티는 문자열의 문자 개수를 반환한다.&lt;/p&gt;
+&lt;h1 id=&quot;3-string-메서드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-string-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;3 string 메서드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. String 메서드&lt;/h1&gt;
+&lt;p&gt;배열에는 &lt;code class=&quot;language-text&quot;&gt;mutator method&lt;/code&gt;(원본배열 직접변경)와 &lt;code class=&quot;language-text&quot;&gt;accessor method&lt;/code&gt;(새로운 배열 생성)가 있다.&lt;/p&gt;
+&lt;p&gt;String 객체에는 원본 String 래퍼 객체를 직접 변경하는 메서드는 존재하지 않는다. 문자열은 변경 &lt;code class=&quot;language-text&quot;&gt;immutable&lt;/code&gt;한 값이기 때문에 &lt;strong&gt;&lt;em&gt;String 래퍼 객체도 읽기 전용 객체로 제공된다.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const strObj = new String(&apos;Lee&apos;);
+console.log(Object.getOwnPropertyDescriptors(strObj));
+
+//
+{
+  0: {value: &apos;L&apos;, writable: false, enumerable: true, configurable: false}
+  1: {value: &apos;e&apos;, writable: false, enumerable: true, configurable: false}
+  2: {value: &apos;e&apos;, writable: false, enumerable: true, configurable: false}
+  length: {value: 3, writable: false, enumerable: false, configurable: false}
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;String.prototype.indexOf&lt;/code&gt; : 대상 문자열에서 인수로 전달받은 문자열을 검색하여 &lt;strong&gt;첫번째 인덱스&lt;/strong&gt;를 반환한다. 검색에 실패하면 -1를 반환한다. indexOf 메서드의 2번째 인수로 검색을 시작할 인덱스를 전달할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const str = &apos;Hello Hello&apos;;
+str.indexOf(&apos;l&apos;); // 2
+str.indexOf(&apos;l&apos;,7) // 8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;indexOf&lt;/code&gt; 메서드는 대상 문자열에 특정 문자열이 존재하는지 확인할 때 유용하며 ES6에서 도입된 &lt;code class=&quot;language-text&quot;&gt;String.prototype.includes&lt;/code&gt; 메서드를 사용하면 가독성이 더 좋다. &lt;code class=&quot;language-text&quot;&gt;includes&lt;/code&gt;는 결과를 true false로 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;if(str.includes(&apos;Hello&apos;) {
+
+})&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;String.prototype.search&lt;/code&gt; : 대상 문자열에서 인수로 전달받은 정규 표현식과 매치하는 문자열을 검색하여 일치하는 문자열의 인덱스를 반환한다. 검색에 실패하면 -1을 반환한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;String.prototype.startsWith&lt;/code&gt; : ES6에서 도입된 메서드로 대상 문자열이 인수로 전달받은 문자열로 시작하는지 확인하여 그 결과를 true, false로 반환한다. 2번째 인수로 검색을 시작할 인덱스를 전달할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const str = &apos;HaHa&apos;
+str.startsWith(&apos;Ha&apos;) // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;String.prototype.endsWith&lt;/code&gt; : ES6에서 도입된 메서드로 대상 문자열이 인수로 전달받은 문자열로 끝나는지 확인하여 그 결과를 true, false로 반환한다. 2번째 인수로 검색할 문자열의 길이를 전달할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;String.prototype.charAt&lt;/code&gt; : 대상 문자열에서 인수로 전달받은 인덱스에 위치한 문자를 검색하여 반환한다. 인덱스는 문자열의 범위 사이의 정수이어야 하며 인덱스가 문자열의 범위를 벗어난 경우 빈 문자열을 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const str = &apos;HaHa&apos;
+
+for (let i=0; i&amp;lt;str.length; i++) {
+  console.log(str.charAt(i)); // H a H a
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;String.prototype.substring&lt;/code&gt; : 대상 문자열에서 첫번째 인수로 전달받은 인덱스에 위치하는 문자부터 두번째 인수로 전달받은 인덱스에 위치하는 문자의 바로 이전까지 부분 문자열을 반환한다. 두번째 인수는 생략 할 수 있다. 이때 첫번째 인수로 전달한 인덱스에 위치하는 문자부터 마지막문자까지 부분 문자열을 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const str = &apos;Hello World&apos;;
+
+// 인덱스 1부터 인덱스 5 이전까지의 부분 문자열을 반환
+str.substring(1,5) // &apos;ello&apos;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;String.prototype.slice&lt;/code&gt; : &lt;code class=&quot;language-text&quot;&gt;substring&lt;/code&gt;과 동일하게 동작한다. 하지만 &lt;code class=&quot;language-text&quot;&gt;slice&lt;/code&gt; 메서드는 음수인 인수를 전달할 수 있다. 음수인 인수를 전달하면 대상 문자열의 가장 뒤에서부터 시작해서 문자열을 잘라내어 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const str = &apos;Hello world&apos;;
+
+// 뒤에서 5자리를 잘라내어 반환한다.
+str.slice(-5); // &apos;world&apos;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;String.prototype.toUpperCase&lt;/code&gt; : 대상 문자열을 모두 대문자로 변경한 문자열을 반환한다.
+&lt;code class=&quot;language-text&quot;&gt;String.prototype.toLowerCase&lt;/code&gt; : 대상 문자열을 모두 소문자로 변경한 문자열을 반환한다.
+&lt;code class=&quot;language-text&quot;&gt;String.prototype.trim&lt;/code&gt; : 대상 문자열 앞뒤에 공백을 제거한 문자열을 반환한다.
+&lt;code class=&quot;language-text&quot;&gt;String.prototype.repeat&lt;/code&gt; : ES6에서 도입된 &lt;code class=&quot;language-text&quot;&gt;repeat&lt;/code&gt; 메서드는 대상 문자열을 인수로 전달받은 정수만큼 반복해 연결한 새로운 문자열을 반홚나다. 전달받은 정수가 0 이면 빈 문자열을 반환하고 음수이면 &lt;code class=&quot;language-text&quot;&gt;RangeError&lt;/code&gt; 를 발생시킨다. 인수를 생략하면 0이 설정된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const str = &apos;basic&apos;;
+
+str.repeat(); // &apos;&apos;
+str.repeat(0); // &apos;&apos;
+str.repeat(1); // &apos;basic&apos;
+str.repeat(2); // &apos;basicbasic&apos;
+str.repeat(-1); // RangeError&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;String.prototype.replace&lt;/code&gt;: 대상 문자열에서 첫번째 인수로 전달받은 문자열 또는 정규표현식을 검색하여 두번째 인수로 전달한 문자열로 치환한 문자열을 반환한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;String.prototype.split&lt;/code&gt;: 첫번째 인수로 전달한 문자열 또는 정규 표현식을 검색하여 문자열을 구분한 후 분리된 각 문자열로 이루어진 배열을 반환한다. 인수로 빈 문자열을 전달하면 각 문자를 모두 분리하고 인수를 생략하면 문자열 전체를 단일 요소로 하는 배열을 반환한다. 두번째 인수로 배열의 길이를 지정할 수 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Youtube]]></title><description><![CDATA[1. 유튜브 클론 이 프로젝트는 youtube api를 이용해 데이터를 받아와서 검색, 비디오 재생의 기능을 구현 2. 오류 프로젝트를 진행하면서 오류해결에 오랜 시간이 걸렸던 내용들을 정리했다.  가장 많이 발생한 오류로 api…]]></description><link>https://github.com/sangzun-han/PROJECT/youtube/</link><guid isPermaLink="false">https://github.com/sangzun-han/PROJECT/youtube/</guid><pubDate>Wed, 05 Jan 2022 15:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-유튜브-클론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%9C%A0%ED%8A%9C%EB%B8%8C-%ED%81%B4%EB%A1%A0&quot; aria-label=&quot;1 유튜브 클론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 유튜브 클론&lt;/h1&gt;
+&lt;p&gt;이 프로젝트는 youtube api를 이용해 데이터를 받아와서 검색, 비디오 재생의 기능을 구현&lt;/p&gt;
+&lt;h1 id=&quot;2-오류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%98%A4%EB%A5%98&quot; aria-label=&quot;2 오류 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 오류&lt;/h1&gt;
+&lt;p&gt;프로젝트를 진행하면서 오류해결에 오랜 시간이 걸렸던 내용들을 정리했다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;The request cannot be completed because you have exceeded ~~~&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;가장 많이 발생한 오류로 api의 하루 할당량을 초과했다는 내용이었다. 해결방법으로는 이전 API를 삭제하고 새 API를 만드는 방법이 있었고 새로운 구글아이디로 새로운 API KEY를 받아오는 방법이 있었는데 후자의 방법으로 해결했다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[31. RegExp]]></title><description><![CDATA[1. 정규표현식 정규 표현식은 문자열을 대상으로 패턴 매칭 기능을 제공한다.  : 특정 패턴과 일치하는 문자열을 검색하거나 추출 또는 치환할 수 있는 기능 2. 정규표현식 생성 정규 표현식 객체(RegExp…]]></description><link>https://github.com/sangzun-han/자바스크립트/31.RegExp/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/31.RegExp/</guid><pubDate>Tue, 04 Jan 2022 13:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-정규표현식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D&quot; aria-label=&quot;1 정규표현식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 정규표현식&lt;/h1&gt;
+&lt;p&gt;정규 표현식은 문자열을 대상으로 &lt;strong&gt;&lt;em&gt;패턴 매칭 기능&lt;/em&gt;&lt;/strong&gt;을 제공한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;패턴매칭기능&lt;/code&gt; : 특정 패턴과 일치하는 문자열을 검색하거나 추출 또는 치환할 수 있는 기능&lt;/p&gt;
+&lt;h1 id=&quot;2-정규표현식-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;2 정규표현식 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 정규표현식 생성&lt;/h1&gt;
+&lt;p&gt;정규 표현식 객체(RegExp 객체)를 생성하기 위해서는 &lt;strong&gt;&lt;em&gt;정규 표현식 리터럴&lt;/em&gt;&lt;/strong&gt;과 RegExp 생성자 함수를 사용할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/regexp.jpg&quot; alt=&quot;regexp&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;Is this all there is?&apos;;
+
+const regexp = /is/i; // 패턴 : is, 플래그 : i =&gt; 대소문자를 구별하지 않고 검색한다.
+
+regexp.test(target); // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;Is this all there is?&apos;;
+
+const regexp = new RegExp(/is/i);
+
+regexp.test(target);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;3-정규표현식-메서드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;3 정규표현식 메서드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 정규표현식 메서드&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;RegExp.protytpe.exec&lt;/code&gt; : 인수로 전달받은 문자열에 대해 정규 표현식의 패턴을 검색하여 매칭 결과를 배열로 반환한다. 매칭 결과가 없는 경우 null을 반환한다. 문자열 내의 모든 패턴을 검색하는 g플래그를 지정해도 첫번째 매칭 결과만 반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;Is this all there is?&apos;;
+const regExp = /is/;
+
+regExp.exec(target);
+// [&apos;is&apos;, index: 5, input: &apos;Is this all there is?&apos;, groups: undefined]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;RegExp.prototype.test&lt;/code&gt; : 인수로 전달받은 문자열에 대해 정규 표현식의 패턴을 검색하여 매칭 결과를 boolean 값으로 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;String.prototype.match&lt;/code&gt; : 대상 문자열과 인수로 전달받은 정규 표현식과의 매칭 결과를 배열로 반환한다. g플래그가 지정되면 모든 매칭 결과를 배열로 반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;Is this all there is?&apos;;
+const regExp = /is/;
+
+target.match(regExp);
+// [&apos;is&apos;, index: 5, input: &apos;Is this all there is?&apos;, groups: undefined]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;Is this all there is?&apos;;
+const regExp = /is/g;
+
+target.match(regExp); //[&apos;is&apos;, &apos;is&apos;]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;4-플래그&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-%ED%94%8C%EB%9E%98%EA%B7%B8&quot; aria-label=&quot;4 플래그 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 플래그&lt;/h1&gt;
+&lt;p&gt;패턴과 함께 정규 표현식을 구성하는 플래그는 정규 표현식의 검색 방식을 설정하기 위해 사용한다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;플래그&lt;/th&gt;
+&lt;th&gt;의미&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;i&lt;/td&gt;
+&lt;td&gt;ignore case&lt;/td&gt;
+&lt;td&gt;대소문자를 구별하지 않고 패턴을 검색한다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;g&lt;/td&gt;
+&lt;td&gt;Global&lt;/td&gt;
+&lt;td&gt;대상 문자열 내에서 패턴과 일치하는 모든 문자열을 전역 검색한다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;m&lt;/td&gt;
+&lt;td&gt;Multi line&lt;/td&gt;
+&lt;td&gt;문자열의 행이 바뀌더라도 패턴 검색을 계속한다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;플래그는 옵션이므로 선택적으로 사용할 수 있으며 순서와 상관없이 하나 이상의 플래그를 동시에 설정할 수도 있다. 어떠한 플래그도 사용하지 않은 경우에 대소문자를 구별해서 패턴을 검색하며 패턴 검색 매칭 대상이 1개 이상 존재해도 첫번째 매칭한 대상만 검색하고 종료한다.&lt;/p&gt;
+&lt;h1 id=&quot;5-패턴&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-%ED%8C%A8%ED%84%B4&quot; aria-label=&quot;5 패턴 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. 패턴&lt;/h1&gt;
+&lt;p&gt;정규표현식의 패턴은 문자열의 일정한 규칙을 표현하기 위해 사용한다.&lt;/p&gt;
+&lt;h3 id=&quot;5-1-임의의-문자열-검색&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-1-%EC%9E%84%EC%9D%98%EC%9D%98-%EB%AC%B8%EC%9E%90%EC%97%B4-%EA%B2%80%EC%83%89&quot; aria-label=&quot;5 1 임의의 문자열 검색 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5-1. 임의의 문자열 검색&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.&lt;/code&gt; 은 임의의 문자 한개를 의미한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;Is this all there is?&apos;;
+
+const regExp = /.../g;
+
+target.match(regExp);
+
+// [&apos;Is &apos;, &apos;thi&apos;, &apos;s a&apos;, &apos;ll &apos;, &apos;the&apos;, &apos;re &apos;, &apos;is?&apos;]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;5-2-반복-검색&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-2-%EB%B0%98%EB%B3%B5-%EA%B2%80%EC%83%89&quot; aria-label=&quot;5 2 반복 검색 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5-2. 반복 검색&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;{m,n}&lt;/code&gt;은 앞선 패턴이 최소 m번, 최대n번 반복되는 문자열을 의미한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;A AA B BB Aa Bb AAA&apos;;
+
+// A가 최소1번 최대2번 반복되는 문자열
+const regExp = /A{1,2}/g;
+
+target.match(regExp)
+// [&apos;A&apos;, &apos;AA&apos;, &apos;A&apos;, &apos;AA&apos;, &apos;A&apos;]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;{n}&lt;/code&gt;은 앞선 패턴이 n번 반복되는 문자열을 의미한다. 즉 &lt;code class=&quot;language-text&quot;&gt;{n}&lt;/code&gt;은 &lt;code class=&quot;language-text&quot;&gt;{n,n}&lt;/code&gt;과 같다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;{n,}&lt;/code&gt;은 앞선 패턴이 최소 n번 이상 반복되는 문자열을 의미한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;+&lt;/code&gt; 는 앞선패턴이 최소 한번 이상 반복되는 문자열을 의미한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;A AA B BB Aa Bb AAA&apos;;
+
+
+//&apos;A&apos;가 최소 한번 이상 반복되는 문자열을 전역 검색한다.
+const regExp = /A+/g;
+
+target.match(regExp);
+//[&apos;A&apos;, &apos;AA&apos;, &apos;A&apos;, &apos;AAA&apos;]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;?&lt;/code&gt;는 앞선 패턴이 최대 한번(0번 포함) 이상 반복되는 문자열을 의미한다. 즉 &lt;code class=&quot;language-text&quot;&gt;{0,1}&lt;/code&gt;과 같다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;color colour&apos;;
+
+// &apos;u&apos;가 최대 한번(0번 포함) 이상 반복되고 &apos;r&apos;이 이어지는 문자열 검색
+const regExp = /colou?r/g;
+
+target.match(regExp); // [&apos;color&apos;, &apos;colour&apos;]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;!&lt;/code&gt;는 or의 의미를 갖는다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;[]&lt;/code&gt; 내의 문자는 or로 동작한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;A AA B BB Aa Bb&apos;;
+
+const regExp = /[AB]+/g;
+
+target.match(regExp);
+
+//[&apos;A&apos;, &apos;AA&apos;, &apos;B&apos;, &apos;BB&apos;, &apos;A&apos;, &apos;B&apos;]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;범위를 지정하려면 &lt;code class=&quot;language-text&quot;&gt;[]&lt;/code&gt;내에 &lt;code class=&quot;language-text&quot;&gt;-&lt;/code&gt;를 사용한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;AA BB Ab Bb 12&apos;;
+
+// &apos;A&apos; ~ &apos;Z&apos;가 한번 이상 반복되는 문자열 전역 검색
+const regExp = /[A-Z]+/g;
+
+target.match(regExp);
+
+// [&apos;AA&apos;, &apos;BB&apos;, &apos;A&apos;, &apos;B&apos;]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;/d&lt;/code&gt;는 숫자를 의미한다. 즉 &lt;code class=&quot;language-text&quot;&gt;/d&lt;/code&gt;는 `[0-9]와 같다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;/D&lt;/code&gt;는 숫자가 아닌 문자를 의미한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;/w&lt;/code&gt;는 알파벳,숫자,언더스코어를 의미한다. 즉 &lt;code class=&quot;language-text&quot;&gt;/w&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;[A-Za-z0-9_]&lt;/code&gt;와 같다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;/W&lt;/code&gt;는 알파벳,숫자,언더스코어가 아닌 문자를 의미한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;[...]&lt;/code&gt; 내의 &lt;code class=&quot;language-text&quot;&gt;^&lt;/code&gt;는 not의 의미를 갖는다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;[...]&lt;/code&gt; 밖의 &lt;code class=&quot;language-text&quot;&gt;^&lt;/code&gt;는 문자열의 시작을 의미한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const target = &apos;https://pi.com&apos;;
+
+// https로 시작하는지
+const regExp = /^https/;
+
+target.test(target) // true;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$&lt;/code&gt;는 문자열의 마지막을 의미한다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[30. Date]]></title><description><![CDATA[표준 빌트인 객체인 Date는 날짜와 시간을 위한 메서드를 제공하는 빌트인 객체이면서 생성자 함수이다. 1. Date 생성자 함수 Date 생성자 함수로 생성한 Date 객체는 내부적으로 날짜와 시간을 나타내는 정수값을 갖는다.
+1970년 1월…]]></description><link>https://github.com/sangzun-han/자바스크립트/30.Date/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/30.Date/</guid><pubDate>Mon, 03 Jan 2022 13:00:00 GMT</pubDate><content:encoded>&lt;p&gt;표준 빌트인 객체인 Date는 날짜와 시간을 위한 메서드를 제공하는 빌트인 객체이면서 생성자 함수이다.&lt;/p&gt;
+&lt;h1 id=&quot;1-date-생성자-함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-date-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98&quot; aria-label=&quot;1 date 생성자 함수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Date 생성자 함수&lt;/h1&gt;
+&lt;p&gt;Date 생성자 함수로 생성한 Date 객체는 내부적으로 날짜와 시간을 나타내는 정수값을 갖는다.
+1970년 1월 1일 00:00:00(UTC)을 기점으로 Date 객체가 나타내는 날짜와 시간까지의 밀리초를 나타낸다.&lt;/p&gt;
+&lt;p&gt;Date 생성자 함수로 생성한 Date 객체는 기본적으로 현재 날짜와 시간을 나타내는 정수값을 가진다.&lt;/p&gt;
+&lt;h3 id=&quot;1-1-new-date&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-1-new-date&quot; aria-label=&quot;1 1 new date permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1-1. new Date()&lt;/h3&gt;
+&lt;p&gt;new 연산자와 함께 호출하면 Date 객체를 그렇지 않으면 문자열을 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;new Date(); // Mon Jan 03 2022 21:35:24 GMT+0900 (한국 표준시)
+Date(); //&apos;Mon Jan 03 2022 21:35:43 GMT+0900 (한국 표준시)&apos;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;1-2-new-datemilliseconds&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-2-new-datemilliseconds&quot; aria-label=&quot;1 2 new datemilliseconds permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1-2. new Date(milliseconds)&lt;/h3&gt;
+&lt;p&gt;Date 생성자 함수에 숫자 타입의 밀리초를 인수로 전달하면 UTC를 기준으로 인수로 전달된만큼 경과한 날짜와 시간을 나타내는 Date 객체를 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;new Date(86400000); // Fri Jan 02 1970 09:00:00 GMT+0900 (한국 표준시)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;1-3-new-datedatestring&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-3-new-datedatestring&quot; aria-label=&quot;1 3 new datedatestring permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1-3 new Date(dateString)&lt;/h3&gt;
+&lt;p&gt;문자열을 인수로 전달하면 지정된 날짜와 시간을 나타내는 Date객체를 반환한다. 인수로 전달한 문자열은 Date.parse에 의해 해석 가능한 형식이어야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;new Date(&apos;May 26, 2020 10:00:00&apos;); // Tue May 26 2020 10:00:00 GMT+0900 (한국 표준시)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;1-4-new-dateyear-month-dayhourminutesecondmillisecond&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-4-new-dateyear-month-dayhourminutesecondmillisecond&quot; aria-label=&quot;1 4 new dateyear month dayhourminutesecondmillisecond permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1-4. new Date(year, month, [,day,hour,minute,second,millisecond])&lt;/h3&gt;
+&lt;p&gt;year,month는 반드시 지정해야하며 month(0 ~ 11, 0은 1월 11은 12월)&lt;/p&gt;
+&lt;h1 id=&quot;2-date-메서드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-date-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;2 date 메서드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. Date 메서드&lt;/h1&gt;
+&lt;h3 id=&quot;2-1-datenow&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-1-datenow&quot; aria-label=&quot;2 1 datenow permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-1. Date.now&lt;/h3&gt;
+&lt;p&gt;1970.01.01 00:00:00을 기점으로 현재 시간까지 경과한 밀리초를 숫자로 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Date.now(); // 1641214945803&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;2-2-dateparse&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-2-dateparse&quot; aria-label=&quot;2 2 dateparse permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-2. Date.parse&lt;/h3&gt;
+&lt;p&gt;1970.01.01 UTC를 기점으로 인수로 전달된 지정 시간까지의 밀리초를 숫자로 반환한다.&lt;/p&gt;
+&lt;h3 id=&quot;2-3-dateutc&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-3-dateutc&quot; aria-label=&quot;2 3 dateutc permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-3. Date.UTC&lt;/h3&gt;
+&lt;p&gt;1970.01.01 UTC를 기점으로 인수로 전달된 지정시간까지의 밀리초를 숫자로 반환한다. Date.UTC 메서드는 new Date(year, month, [day,hour,minute,second,millisecond])와 같은 형식의 인수를 사용해야 하며 UTC로 인식된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.getFullYear&lt;/code&gt; : Date 객체의 연도를 나타내는 정수를 반환&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.setFullYear&lt;/code&gt; : Date 객체에 연도를 나타내는 정수를 설정&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.getFullYear&lt;/code&gt; : Date 객체에 연도를 나타내는 정수를 설정&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.getMonth&lt;/code&gt; : Date 객체의 월을 나타내는 0~11의 정수를 반환&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.setMonth&lt;/code&gt; : Date 객체의 월을 나타내는 0~11의 정수를 설정&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.getDay&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.setDay&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.getHours&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.setHours&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.getMinutes&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.setMinutes&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.getSeconds&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.setSeconds&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.getMilliseconds&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.setMilliseconds&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.getTime&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.setTime&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.getTimezoneoffset&lt;/code&gt; : UTC와 Date 객체에 지정된 locale 시간과의 차이를 분단위로 반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const today = new Date();
+
+today.getTimezoneOffset() / 60; // -9&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.toDateString&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.toTimeString&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.toISOString&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.toLocaleString&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Date.prototype.toLocaleTimeString&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;3-date를-이용한-시계&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-date%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%8B%9C%EA%B3%84&quot; aria-label=&quot;3 date를 이용한 시계 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. Date를 이용한 시계&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function printNow() {
+  const today = new Date();
+
+  const dayNames = [
+    &apos;(일요일)&apos;,
+    &apos;(월요일)&apos;,
+    &apos;(화요일)&apos;,
+    &apos;(수요일)&apos;,
+    &apos;(목요일)&apos;,
+    &apos;(금요일)&apos;,
+    &apos;(토요일)&apos;,
+  ];
+
+  const day = dayNames[today.getDay()];
+
+  const year = today.getFullYear();
+  const month = today.getMonth() + 1;
+  const date = today.getDate();
+
+  let hour = today.getHours();
+  let minute = today.getMinutes();
+  let second = today.getSeconds();
+
+  const ampm = hour &gt;= 12 ? &apos;pm&apos; : &apos;am&apos;;
+
+  hour %= 12;
+  hour = hour || 12;
+
+
+  minute = minute &amp;lt; 10 ? &apos;0&apos; + minute : minute;
+  second = second &amp;lt; 10 ? &apos;0&apos; + second : second;
+
+  const now = `${year}년 ${month}월 ${date}일 ${day}
+  ${hour} ${minute} ${second} ${ampm}`;
+
+  console.log(now);
+  setTimeout(printNow, 1000);
+})();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[29. Math]]></title><description><![CDATA[1. Math 프로퍼티 2. Math 메서드  : 인수로 전달된 숫자의 절대값을 반환 (절대값은 반드시…]]></description><link>https://github.com/sangzun-han/자바스크립트/29.Math/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/29.Math/</guid><pubDate>Sun, 02 Jan 2022 13:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-math-프로퍼티&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-math-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0&quot; aria-label=&quot;1 math 프로퍼티 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Math 프로퍼티&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Math.PI // 3.141592653589793&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;2-math-메서드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-math-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;2 math 메서드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. Math 메서드&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Math.abs&lt;/code&gt; : 인수로 전달된 숫자의 절대값을 반환 (절대값은 반드시 0또는 양수)&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Math.round&lt;/code&gt;: 인수로 전달된 숫자의 소수점 이하를 반올림한 정수를 반환&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Math.floor&lt;/code&gt; : 인수로 전달된 숫자의 소수점 이하를 내림한 정수를 반환&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Math.ceil&lt;/code&gt; : 인수로 전달된 숫자의 소수점 이하를 올림한 정수를 반환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Math.ceil(1.4); // 2
+Math.ceil(-1.4); // -1
+Math.ceil(); // NaN&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Math.sqrt&lt;/code&gt; : 인수로 전달된 숫자의 제곱근을 반환&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Math.random&lt;/code&gt; : 임의의 난수(0이상 ~ 1미만)를 반환&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Math.pow&lt;/code&gt; : 첫번째 인수를 밑으로 두번째 인수를 지수로 거듭제곱한 결과를 반환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Math.pow(2,8); // 256
+Math.pow(2); // NaN&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Math.max&lt;/code&gt; : 전달받은 인수 중 가장 큰 수 반환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Math.max(1,2); // 1
+Math.max(); // -Infinity&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Math.min&lt;/code&gt; : 전달받은 인수 중 가장 작은 수 반환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Math.min(1,2); // 1
+Math.min();// Infinity&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[포트폴리오]]></title><description><![CDATA[포트폴리오 페이지를 제작하기에 앞서 다른 사람들은 포토폴리오를 어떻게 만들었는지 찾아봤습니다. 자신의 소개글, skill등을 나열한 포트폴리오를 보면서 나는 나의 skill…]]></description><link>https://github.com/sangzun-han/PROJECT/portfolio/</link><guid isPermaLink="false">https://github.com/sangzun-han/PROJECT/portfolio/</guid><pubDate>Fri, 31 Dec 2021 15:00:00 GMT</pubDate><content:encoded>&lt;p&gt;포트폴리오 페이지를 제작하기에 앞서 다른 사람들은 포토폴리오를 어떻게 만들었는지 찾아봤습니다. 자신의 소개글, skill등을 나열한 포트폴리오를 보면서 나는 나의 skill을 평가할 실력이 되는걸까 또 취업을 준비하는 입장에서 나는 나를 개발자라고 당당히 소개할 수 있는건가를 생객했습니다.&lt;/p&gt;
+&lt;p&gt;그 결과 소개글, 프로필사진, skill같은것들은 과감히 빼버리고 &lt;code class=&quot;language-text&quot;&gt;keyword&lt;/code&gt; 를 잡고 나만의 포트폴리오를 제작하기로 했습니다.&lt;/p&gt;
+&lt;h1 id=&quot;키워드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%82%A4%EC%9B%8C%EB%93%9C&quot; aria-label=&quot;키워드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;키워드&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;‘나’를 나타낼 수 있는것&lt;/li&gt;
+&lt;li&gt;웹 접근성&lt;/li&gt;
+&lt;li&gt;SEO&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[28. Number]]></title><description><![CDATA[1. Number 생성자 함수 표준 빌트인 객체인 Number 객체는 생성자 함수 객체다. 따라서 new 연산자와 함께 Number 인스턴스를 생성할 수 있다. Number 생성자 함수에 인수를 전달하지 않고 new…]]></description><link>https://github.com/sangzun-han/자바스크립트/28.Number/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/28.Number/</guid><pubDate>Fri, 24 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-number-생성자-함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-number-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98&quot; aria-label=&quot;1 number 생성자 함수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Number 생성자 함수&lt;/h1&gt;
 &lt;p&gt;표준 빌트인 객체인 Number 객체는 생성자 함수 객체다. 따라서 new 연산자와 함께 Number 인스턴스를 생성할 수 있다.&lt;/p&gt;
 &lt;p&gt;Number 생성자 함수에 인수를 전달하지 않고 new 연산자와 함께 호출하면 [[NumberData]] 내부슬롯에 0을 할당한 Number 래퍼 객체를 생성한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const numObj = new Number();
@@ -10,7 +344,7 @@ Number(true); // 1
 Number(&apos;aaa&apos;); // NaN&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&quot;2-number-프로퍼티&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-number-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0&quot; aria-label=&quot;2 number 프로퍼티 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. Number 프로퍼티&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Number.EPSILON : EPSILON은 1과 1보다 큰 숫자 중에서 가장 작은 숫자와의 차이와 같다.
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.EPSILON&lt;/code&gt;: EPSILON은 1과 1보다 큰 숫자 중에서 가장 작은 숫자와의 차이와 같다.
 EPSILON은 부동소수점으로 인해 발생하는 오차를 해결하기 위해 사용한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;0.1 + 0.2; // 0.30000000000000004
@@ -22,42 +356,42 @@ function isEqual(a,b) {
 
 isEqual(0.1+0.2, 0.3); // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Number.MAX_VALUE : 자바스크립트에서 표현할 수 있는 가장 큰 양수값&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.MAX_VALUE&lt;/code&gt; : 자바스크립트에서 표현할 수 있는 가장 큰 양수값&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Infinity &gt; Number.MAX_VALUE // ture&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Number.MIN_VALUE : 자바스크립트에서 표현할 수 있는 가장 작은 양수값&lt;/li&gt;
-&lt;li&gt;Number.MAX_ SAFE_ INTEGER : 자바스크립트에서 안전하게 표현할 수 있는 가장 큰 정수값&lt;/li&gt;
-&lt;li&gt;Number.MIN_ SAFE_ INTEGER : 자바스크립트에서 안전하게 표현할 수 있는 가장 작은 정수값&lt;/li&gt;
-&lt;li&gt;Number.POSITIVE_INFINITY&lt;/li&gt;
-&lt;li&gt;Number.NEGATIVE_INFINITY&lt;/li&gt;
-&lt;li&gt;Number.NaN&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.MIN_VALUE&lt;/code&gt; : 자바스크립트에서 표현할 수 있는 가장 작은 양수값&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.MAX* SAFE* INTEGER&lt;/code&gt; : 자바스크립트에서 안전하게 표현할 수 있는 가장 큰 정수값&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.MIN* SAFE* INTEGER&lt;/code&gt; : 자바스크립트에서 안전하게 표현할 수 있는 가장 작은 정수값&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.POSITIVE_INFINITY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.NEGATIVE_INFINITY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.NaN&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;3-number-메서드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-number-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;3 number 메서드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. Number 메서드&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Number.isFinite : 인수로 전달된 값이 유한수라면 true 아니라면 false 빌트인 전역함수 isFinite와는 차이가 있다.
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.isFinite&lt;/code&gt; : 인수로 전달된 값이 유한수라면 true 아니라면 false 빌트인 전역함수 isFinite와는 차이가 있다.
 전역함수 isFinite는 전달받은 인수를 숫자로 암묵적 타입 변환하여 검사를 수행하지만 Number.isFinite는 전달받은 인수를 숫자로 암묵적 타입 변환 하지 않는다.&lt;/li&gt;
-&lt;li&gt;Number.isNaN : 암묵적 타입변환 하지 않는다.&lt;/li&gt;
-&lt;li&gt;Number.isSafeInter : 암묵적 타입변환 하지 않는다.&lt;/li&gt;
-&lt;li&gt;Number.prototype.toExponetial : 숫자를 지수 표기법으로 변환하여 문자열로 반환한다. &lt;strong&gt;&lt;em&gt;숫자 리터럴과 함께 사용할 경우 에러가 발생한다.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.isNaN&lt;/code&gt; : 암묵적 타입변환 하지 않는다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.isSafeInter&lt;/code&gt; : 암묵적 타입변환 하지 않는다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.prototype.toExponetial&lt;/code&gt; : 숫자를 지수 표기법으로 변환하여 문자열로 반환한다. &lt;strong&gt;&lt;em&gt;숫자 리터럴과 함께 사용할 경우 에러가 발생한다.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;77.toExpoential(); // Syntax Error
 (77).toExpoential(); // 7.7e+1
-77 .toExpoential(); // 7.7e+1 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+77 .toExpoential(); // 7.7e+1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Number.prototype.toFixed : 숫자를 반올림하여 문자열로 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.prototype.toFixed&lt;/code&gt; : 숫자를 반올림하여 문자열로 반환한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(123456.789).toFixed(); // 123457
-(123456.789).toFixed(1); // 소수점 이하 1자리까지 유효, 나머지 반올림123456.8 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+(123456.789).toFixed(1); // 소수점 이하 1자리까지 유효, 나머지 반올림123456.8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Number.prototype.toPrecision() : 인수로 전달받은 전체자릿수까지 유효하도록 나머지 자릿수를 반올림하여 문자열로 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.prototype.toPrecision()&lt;/code&gt; : 인수로 전달받은 전체자릿수까지 유효하도록 나머지 자릿수를 반올림하여 문자열로 반환한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(12345.6789).toPrecision(); // 12345.6789
 (12345.6789).toPrecision(1); // 전체 1자릿수 유효, 나머지 반올림 1e+4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Number.prototype.toString() : 숫자를 문자열로 반환한다. 진법을 나타내는 2~36사이의 정수값을 인자로 전달할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[27. 배열]]></title><description><![CDATA[1. 배열 배열은 여러 개의 값을 순차적으로 나열한 자료구조이다. 배열은 읻게스와 length 프로퍼티를 갖기 때문에 for문을 통해 순차적으로 접근할 수 있다. 배열은 객체 타입이다. 배열 리터럴, Array 생성자 함수, Array.of…]]></description><link>https://github.com/sangzun-han/자바스크립트/27.배열/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/27.배열/</guid><pubDate>Tue, 21 Dec 2021 03:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-배열&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;1 배열 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 배열&lt;/h1&gt;
-&lt;p&gt;배열은 여러 개의 값을 순차적으로 나열한 자료구조이다. 배열은 읻게스와 length 프로퍼티를 갖기 때문에 for문을 통해 순차적으로 접근할 수 있다.&lt;/p&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Number.prototype.toString()&lt;/code&gt; : 숫자를 문자열로 반환한다. 진법을 나타내는 2~36사이의 정수값을 인자로 전달할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[27. 배열]]></title><description><![CDATA[1. 배열 배열은 여러 개의 값을 순차적으로 나열한 자료구조이다. 배열은 인덱스와 length 프로퍼티를 갖기 때문에 for문을 통해 순차적으로 접근할 수 있다. 배열은 객체 타입이다. 배열 리터럴, Array 생성자 함수, Array.of…]]></description><link>https://github.com/sangzun-han/자바스크립트/27.배열/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/27.배열/</guid><pubDate>Tue, 21 Dec 2021 03:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-배열&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;1 배열 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 배열&lt;/h1&gt;
+&lt;p&gt;배열은 여러 개의 값을 순차적으로 나열한 자료구조이다. 배열은 인덱스와 length 프로퍼티를 갖기 때문에 for문을 통해 순차적으로 접근할 수 있다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const arr = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];
 for (let i=0; i &amp;lt; arr.length; i++) {
   console.log(arr[i])
@@ -111,32 +445,32 @@ console.log(arr) // [1,3]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&quot;6-배열-메서드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#6-%EB%B0%B0%EC%97%B4-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;6 배열 메서드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;6. 배열 메서드&lt;/h1&gt;
 &lt;p&gt;배열에는 원본배열을 직접 변경하는 메서드(mutator method)와 원본배열을 변경하지 않고 새로운 배열을 생성하여 반환하는 메서드(accessor method)가 있다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Array.isArray : 전달된 인수가 Array이면 true 아니면 false&lt;/li&gt;
-&lt;li&gt;Array.prototype.indexOf : 원본배열에서 인수로 전달된 요소를 검색하여 인덱스를 반환&lt;/li&gt;
-&lt;li&gt;Array.prototype.push : 인수로 전달받은 모든값을 원본배열의 마지막 요소로 추가하고 length 프로퍼티 값을 반환한다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.pop : 원본배열에서 마지막 요소를 제거하고 제거한 요소를 반환한다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.unshift : 인수로 전달받은 모든 값을 원본 배열의 선두에 요소로 추가하고 length 프로퍼티 값을 반환한다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.shift : 원본배열에서 첫번째 요소를 제거하고 제거한 요소를 반환한다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.concat : 인수로 전달된 값들을 원본배열의 마지막 요소로 추가한 새로운 배열을 반환한다. 원본배열은 변경되지 않는다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.splice : splice(start, deleteCount, items) start 인덱스부터 deleteCount만큼 원본배열에서 요소를 제거한다. 제거한 위치에 items를 원본배열에 삽입한다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.slice : 인수로 전달된 범위의 요소들을 복사하여 배열로 반환한다. 원본배열은 변경되지 않는다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.join : 원본 배열의 모든 요소를 문자열로 변환한 후 구분자로 연결한 문자열을 반환한다. 구분자는 생략가능하다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.isArray&lt;/code&gt; : 전달된 인수가 Array이면 true 아니면 false&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.indexOf&lt;/code&gt; : 원본배열에서 인수로 전달된 요소를 검색하여 인덱스를 반환&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.push&lt;/code&gt; : 인수로 전달받은 모든값을 원본배열의 마지막 요소로 추가하고 length 프로퍼티 값을 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.pop&lt;/code&gt; : 원본배열에서 마지막 요소를 제거하고 제거한 요소를 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.unshift&lt;/code&gt; : 인수로 전달받은 모든 값을 원본 배열의 선두에 요소로 추가하고 length 프로퍼티 값을 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.shift&lt;/code&gt; : 원본배열에서 첫번째 요소를 제거하고 제거한 요소를 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.concat&lt;/code&gt; : 인수로 전달된 값들을 원본배열의 마지막 요소로 추가한 새로운 배열을 반환한다. 원본배열은 변경되지 않는다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.splice&lt;/code&gt; : splice(start, deleteCount, items) start 인덱스부터 deleteCount만큼 원본배열에서 요소를 제거한다. 제거한 위치에 items를 원본배열에 삽입한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.slice&lt;/code&gt; : 인수로 전달된 범위의 요소들을 복사하여 배열로 반환한다. 원본배열은 변경되지 않는다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.join&lt;/code&gt; : 원본 배열의 모든 요소를 문자열로 변환한 후 구분자로 연결한 문자열을 반환한다. 구분자는 생략가능하다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const arr = [1,2,3];
 
 arr.join(); // &apos;1,2,3,4&apos;;
 arr.join(&apos;&apos;); // &apos;1234&apos;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Array.prototype.reverse : 원본 배열의 순서를 반대로 뒤집는다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.fill : 인수로 전달받은 값을 배열의 처음부터 끝까지 요소로 채운다. 원본 배열이 변경된다. 두번째 인수로 요소채우기를 시작할 인덱스를 전달 할 수 있고 세번째 인수로 요소 채우기를 멈출 인덱스를 전달 할 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.reverse&lt;/code&gt; : 원본 배열의 순서를 반대로 뒤집는다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.fill&lt;/code&gt; : 인수로 전달받은 값을 배열의 처음부터 끝까지 요소로 채운다. 원본 배열이 변경된다. 두번째 인수로 요소채우기를 시작할 인덱스를 전달 할 수 있고 세번째 인수로 요소 채우기를 멈출 인덱스를 전달 할 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const arr = [1,2,3];
 
 arr.fill(&apos;a&apos;);
 console.log(arr); // [&apos;a&apos;,&apos;a&apos;,&apos;a&apos;]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Array.prototype.includes : 배열 내에 특정 요소가 있다면 true 아니면 false 두번째 인수로 검색을 시작할 인덱스를 전달 할 수 있다. 음수를 전달하면 (length + index)를 검색 시작 인덱스로 설정한다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.flat : 인수로 전달한 깊이만큼 재귀적으로 배열을 평탄화 한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.includes&lt;/code&gt; : 배열 내에 특정 요소가 있다면 true 아니면 false 두번째 인수로 검색을 시작할 인덱스를 전달 할 수 있다. 음수를 전달하면 (length + index)를 검색 시작 인덱스로 설정한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.flat&lt;/code&gt; : 인수로 전달한 깊이만큼 재귀적으로 배열을 평탄화 한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[1,[2,3,4,5]].flat(); // [1,2,3,4,5];
 
@@ -144,14 +478,14 @@ console.log(arr); // [&apos;a&apos;,&apos;a&apos;,&apos;a&apos;]&lt;/code&gt;&lt
 &lt;h1 id=&quot;7-배열-고차함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#7-%EB%B0%B0%EC%97%B4-%EA%B3%A0%EC%B0%A8%ED%95%A8%EC%88%98&quot; aria-label=&quot;7 배열 고차함수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;7. 배열 고차함수&lt;/h1&gt;
 &lt;p&gt;고차함수는 함수를 인수로 전달받거나 함수를 반환하는 함수이다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Array.prototype.sort : 배열의 요소를 정렬한다. 원본배열을 직접 변경하며 정렬된 배열을 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.sort&lt;/code&gt; : 배열의 요소를 정렬한다. 원본배열을 직접 변경하며 정렬된 배열을 반환한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;sort 메서드는 유니코드 코드 포인트의 순서를 따른다. 따라서 배열의 요소가 숫자타입이라면 주의가 필요하다.&lt;/p&gt;
 &lt;p&gt;숫자 요소를 정렬할 때는 sort 메서드에 정렬 순서를 정의하는 비교 함수를 인수로 전달해야 한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const arr = [40,100,1,5,2,25,10];
 arr.sort((a,b) =&gt; a - b); // [1, 2, 5, 10, 25, 40, 100]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Array.prototype.forEach : 자신의 내부에서 반복문을 실행한다. forEach는 원본배열을 변경하지 않지만 콜백함수를 통해 원본 배열을 변경 할 수는 있다. forEach 메서드는 break, continue 문을 사용할 수 없다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.forEach&lt;/code&gt; : 자신의 내부에서 반복문을 실행한다. forEach는 원본배열을 변경하지 않지만 콜백함수를 통해 원본 배열을 변경 할 수는 있다. forEach 메서드는 break, continue 문을 사용할 수 없다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const numbers = [1,2,3];
 const pows = [];
@@ -164,19 +498,19 @@ numbers.forEach(item, index, arr) =&gt; {arr[index] = item ** 2}
 // 세번째 인자 arr는 원본배열을 가리킨다.
 console.log(numbers) // 1,4,9&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Array.prototype.map : 자신을 호출한 배열의 모든 요소를 순회하면서 인수로 전달받은 콜백함수를 반복 호출한다. 그리고 콜백 함수의 반환값들로 구성된 새로운 배열을 반환한다. &lt;strong&gt;&lt;em&gt;원본 배열은 변경되지 않는다.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Array.prototype.filter : 자신을 호출한 배열의 모든 요소를 순회하면서 인수로 전달받은 콜백함수를 반복 호출한다. 콜백 함수의 반환값이 true인 요소로만 구성된 새로운 배열을 반환한다. &lt;strong&gt;&lt;em&gt;원본 배열은 변경되지 않는다.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Array.prototype.reduce : 자신을 호출한 배열의 모든 요소를 순회하며 인수로 전달받은 콜백함수를 반복 호출한다. 콜백 함수의 반환값을 다음 순회시에 콜백함수의 첫번째 인수로 전달하면서 콜백 함수를 호출하여 하나의 결과값을 만들어 반환한다.  &lt;strong&gt;&lt;em&gt;원본 배열은 변경되지 않는다.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.map&lt;/code&gt; : 자신을 호출한 배열의 모든 요소를 순회하면서 인수로 전달받은 콜백함수를 반복 호출한다. 그리고 콜백 함수의 반환값들로 구성된 새로운 배열을 반환한다. &lt;strong&gt;&lt;em&gt;원본 배열은 변경되지 않는다.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.filter&lt;/code&gt; : 자신을 호출한 배열의 모든 요소를 순회하면서 인수로 전달받은 콜백함수를 반복 호출한다. 콜백 함수의 반환값이 true인 요소로만 구성된 새로운 배열을 반환한다. &lt;strong&gt;&lt;em&gt;원본 배열은 변경되지 않는다.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.reduce&lt;/code&gt; : 자신을 호출한 배열의 모든 요소를 순회하며 인수로 전달받은 콜백함수를 반복 호출한다. 콜백 함수의 반환값을 다음 순회시에 콜백함수의 첫번째 인수로 전달하면서 콜백 함수를 호출하여 하나의 결과값을 만들어 반환한다. &lt;strong&gt;&lt;em&gt;원본 배열은 변경되지 않는다.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const sum = [1,2,3,4].reduce((accumulator, currentValue, index, arr) =&gt; accumulator + currentValue , 0)
 
 console.log(sum) // 10&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Array.prototype.some : 자신을 호출한 배열의 모든 요소를 순회하며 인수로 전달받은 콜백함수를 반복 호출한다. 콜백 함수의 반환값이 단 한번이라도 참이라면 true 모두 거짓이면 false를 반환한다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.every : 자신을 호출한 배열의 모든 요소를 순회하며 인수로 전달받은 콜백함수를 반복 호출한다 콜백 함수의 반환값이 모두 참이라면 true 단 한번이라도 거짓이라면 false를 반환한다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.find : 자신을 호출한 배열의 모든 요소를 순회하면서 인수로 전달된 콜백 함수를 호출하여 반환값이 true인 첫번째 요소를 반환한다. 반환값이 true인 요소가 없다면 undefined를 반환한다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.findIndex : 자신을 호출한 배열의 모든 요소를 순회하면서 인수로 전달된 콜백 함수를 호출하여 반환값이 true인 첫번째 요소의 인덱스를 반환한다. 반환값이 true인 요소가 없다면 -1를 반환한다.&lt;/li&gt;
-&lt;li&gt;Array.prototype.flatMap : map 메서드를 통해 생성된 새로운 배열을 평탄화 한다. 즉 map 메서드와 flat 메서드를 순차적으로 실행하는 효과가 있다. (ES10)&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.some&lt;/code&gt; : 자신을 호출한 배열의 모든 요소를 순회하며 인수로 전달받은 콜백함수를 반복 호출한다. 콜백 함수의 반환값이 단 한번이라도 참이라면 true 모두 거짓이면 false를 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.every&lt;/code&gt; : 자신을 호출한 배열의 모든 요소를 순회하며 인수로 전달받은 콜백함수를 반복 호출한다 콜백 함수의 반환값이 모두 참이라면 true 단 한번이라도 거짓이라면 false를 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.find&lt;/code&gt; : 자신을 호출한 배열의 모든 요소를 순회하면서 인수로 전달된 콜백 함수를 호출하여 반환값이 true인 첫번째 요소를 반환한다. 반환값이 true인 요소가 없다면 undefined를 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.findIndex&lt;/code&gt; : 자신을 호출한 배열의 모든 요소를 순회하면서 인수로 전달된 콜백 함수를 호출하여 반환값이 true인 첫번째 요소의 인덱스를 반환한다. 반환값이 true인 요소가 없다면 -1를 반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Array.prototype.flatMap&lt;/code&gt; : map 메서드를 통해 생성된 새로운 배열을 평탄화 한다. 즉 map 메서드와 flat 메서드를 순차적으로 실행하는 효과가 있다. (ES10)&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[26. ES6 함수의 추가 기능]]></title><description><![CDATA[ES6 이전의 함수는 사용 목적에 따라 명확히 구분되지 않는다. 즉 ES6 이전의 모든 함수는 일반 함수로서 호출할 수 있는 것은 물론 생성자 함수로서 호출할 수 있다. ES6이전의 모든 함수는 callable이면서 constructor…]]></description><link>https://github.com/sangzun-han/자바스크립트/26.ES6 함수의 추가 기능/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/26.ES6 함수의 추가 기능/</guid><pubDate>Mon, 20 Dec 2021 10:00:00 GMT</pubDate><content:encoded>&lt;p&gt;ES6 이전의 함수는 사용 목적에 따라 명확히 구분되지 않는다. 즉 ES6 이전의 모든 함수는 일반 함수로서 호출할 수 있는 것은 물론 생성자 함수로서 호출할 수 있다. ES6이전의 모든 함수는 callable이면서 constructor이다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var obj = {
   x:10,
@@ -1406,7 +1740,7 @@ function sum(a,b) {
 &lt;p&gt;switch문은 boolean값보다는 문자열이나 숫자값인 경우가 많다.&lt;/p&gt;
 &lt;h1 id=&quot;3-반복문&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EB%B0%98%EB%B3%B5%EB%AC%B8&quot; aria-label=&quot;3 반복문 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 반복문&lt;/h1&gt;
 &lt;p&gt;반복문(loop statement)는 조건식의 평가 결과가 참인 경우 코드블록을 실행한다. 그후 조건식을 다시 평가하여 여전히 참인경우 코드 블록을 다시 실행한다. 조건식이 거짓이 될 때 까지 반복한다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;자바스크립트는 forEach, for ...in, 
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;자바스크립트는 forEach, for ...in,
 for ...of문과 같이 반복문을 대체할 수 있는 기능을 제공한다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;for문의 변수 선언문, 조건식, 증감식은 모두 옵셥이므로 반드시 사용할 필요는 없다. 단 어떤 식도 선언하지 않으면 무한루프가 된다.&lt;/p&gt;
 &lt;p&gt;while문은 주로 반복횟수가 불명확할때 사용한다. 조건식의 결과가 항상 참이면 무한루프가 된다. 무한루프를 탈출하기 위해서는 if문으로 탈출조건을 만들고 break문으로 코드 블록을 탈출한다.&lt;/p&gt;
@@ -1462,7 +1796,7 @@ console.log(x) // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 1 + &apos;2&apos;; // &apos;12&apos;
 
 1 + true; // 2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;개발자의 의도와는 상관없이 자바스크립트 엔진에 의해 암묵적으로 타입이 자동 변환되기도 한다. 이를 &lt;strong&gt;암묵적 타입 변환(implicit coercion) 또는 타입 강제 변환(type coercion)&lt;/strong&gt;이라고 한다 &lt;/p&gt;
+&lt;p&gt;개발자의 의도와는 상관없이 자바스크립트 엔진에 의해 암묵적으로 타입이 자동 변환되기도 한다. 이를 &lt;strong&gt;암묵적 타입 변환(implicit coercion) 또는 타입 강제 변환(type coercion)&lt;/strong&gt;이라고 한다&lt;/p&gt;
 &lt;h1 id=&quot;2-할당-연산자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%ED%95%A0%EB%8B%B9-%EC%97%B0%EC%82%B0%EC%9E%90&quot; aria-label=&quot;2 할당 연산자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 할당 연산자&lt;/h1&gt;
 &lt;p&gt;할당 연산자는 우항에 있는 피연산자의 평가 결과를 좌항에 있는 변수에 할당한다. 따라서 부수효과가 있다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var x;
@@ -1576,7 +1910,7 @@ console.log(10 /- 0) // -Infinity
 console.log(1 * &apos;String&apos;) // NaN&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&quot;2-문자열-타입&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%83%80%EC%9E%85&quot; aria-label=&quot;2 문자열 타입 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 문자열 타입&lt;/h1&gt;
 &lt;p&gt;문자열 타입은 텍스트 데이터를 나타내는데 사용한다.
-문자열은  ”, &quot;&quot;, &lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt;으로 텍스트를 감싼다.
+문자열은 ”, &quot;&quot;, &lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt;으로 텍스트를 감싼다.
 다른타입의 값과 달리 문자열을 따옴표로 감싸는 이유는 키워드나 식별자 같은 토큰과 구분하기 위해서다. 만약 문자열을 따옴표로 감싸지 않으면 자바스크립트 엔진은 키워드나 식별자 같은 토큰으로 인식한다.&lt;/p&gt;
 &lt;h1 id=&quot;3-템플릿-리터럴&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A6%AC%ED%84%B0%EB%9F%B4&quot; aria-label=&quot;3 템플릿 리터럴 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 템플릿 리터럴&lt;/h1&gt;
 &lt;p&gt;ES6부터 템플릿 리터럴(template literal)이라고 하는 새로운 문자열 표기법이 도입되었다. 템플릿 리터럴은 멀티라인 문자열(multi-line string), 표현식 삽입(expresiion interpolation), 태그드 템플릿(tagged template)등 편리한 문자열 처리 기니을 제공한다. &lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt;을 사용해 표현한다.&lt;/p&gt;
@@ -1623,10 +1957,10 @@ int num; // 4바이트&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id=&quot;동적-타입-언어&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8F%99%EC%A0%81-%ED%83%80%EC%9E%85-%EC%96%B8%EC%96%B4&quot; aria-label=&quot;동적 타입 언어 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;동적 타입 언어&lt;/h3&gt;
 &lt;p&gt;동적 타입 언어는 구조적인 단점이 있다. 변수 값은 언제든지 변경될 수 있기 때문에 복잡한 프로그램에서는 변화하는 변수 값을 추적하기 어려울 수 있고
 변수의 타입이 고정되어 있지 않고 값의 변경에 의해 타입도 언제든지 변경될 수 있다.
-결국 &lt;strong&gt;동적 타입언어는 유연성(flexibility)은 높지만 신뢰성(reliability)은 떨어진다.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[05. 표현식과 문]]></title><description><![CDATA[1. 값 값(value)은 식(expression)이 평가(evaluate)되어 생성된 결과를 말한다. 2. 리터럴 리터럴(literal)은  사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 값을 생성하는 표기법(notation…]]></description><link>https://github.com/sangzun-han/자바스크립트/05.표현식과 문/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/05.표현식과 문/</guid><pubDate>Wed, 10 Nov 2021 14:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-값&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EA%B0%92&quot; aria-label=&quot;1 값 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 값&lt;/h1&gt;
+결국 &lt;strong&gt;동적 타입언어는 유연성(flexibility)은 높지만 신뢰성(reliability)은 떨어진다.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[05. 표현식과 문]]></title><description><![CDATA[1. 값 값(value)은 식(expression)이 평가(evaluate)되어 생성된 결과를 말한다. 2. 리터럴 리터럴(literal)은 사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 값을 생성하는 표기법(notation…]]></description><link>https://github.com/sangzun-han/자바스크립트/05.표현식과 문/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/05.표현식과 문/</guid><pubDate>Wed, 10 Nov 2021 14:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-값&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EA%B0%92&quot; aria-label=&quot;1 값 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 값&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;값(value)은 식(expression)이 평가(evaluate)되어 생성된 결과를 말한다.&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&quot;2-리터럴&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EB%A6%AC%ED%84%B0%EB%9F%B4&quot; aria-label=&quot;2 리터럴 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 리터럴&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;리터럴(literal)은  사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 값을 생성하는 표기법(notation)을 말한다.&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;리터럴(literal)은 사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 값을 생성하는 표기법(notation)을 말한다.&lt;/strong&gt;
 자바스크립트 엔진은 코드가 실행되는 시점인 런타임에 리터럴을 평가해 값을 생성한다. 즉 리터럴은 값을 생성하기 위해 미리 약속한 표기법이라고 할 수 있다.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
