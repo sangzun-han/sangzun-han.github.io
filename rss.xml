@@ -1,4 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 17 Jan 2022 10:53:00 GMT</lastBuildDate><item><title><![CDATA[32. String]]></title><description><![CDATA[1. String 생성자 함수 표준 빌트인 객체인 String 객체는 생성자 함수 객체다. new 연산자와 함께 호출하여 String 인스턴스를 생성할 수 있다. String 생성자 함수에 인수를 전달하지 않고 new…]]></description><link>https://github.com/sangzun-han/자바스크립트/32.String/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/32.String/</guid><pubDate>Thu, 06 Jan 2022 13:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-string-생성자-함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-string-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98&quot; aria-label=&quot;1 string 생성자 함수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. String 생성자 함수&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 18 Jan 2022 11:15:27 GMT</lastBuildDate><item><title><![CDATA[33. String]]></title><description><![CDATA[1. 심벌이란?  은 ES6에서 도입된 7번째 데이터 타입으로 변경 불가능한 원시 타입의 값이다. 심벌값은 다른 값과 중복되지 않는 유일무이한 값이다. 따라서 이름의 충돌 위험이 없는 유일한 프로퍼티 키를 만들기 위해 사용한다.…]]></description><link>https://github.com/sangzun-han/자바스크립트/33.Sybmol/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/33.Sybmol/</guid><pubDate>Mon, 17 Jan 2022 21:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-심벌이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%8B%AC%EB%B2%8C%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;1 심벌이란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 심벌이란?&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;symbol&lt;/code&gt; 은 ES6에서 도입된 7번째 데이터 타입으로 변경 불가능한 원시 타입의 값이다. 심벌값은 다른 값과 중복되지 않는 유일무이한 값이다. 따라서 이름의 충돌 위험이 없는 유일한 프로퍼티 키를 만들기 위해 사용한다.&lt;/p&gt;
+&lt;h1 id=&quot;2-심벌값-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%8B%AC%EB%B2%8C%EA%B0%92-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;2 심벌값 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 심벌값 생성&lt;/h1&gt;
+&lt;p&gt;심벌 값은 Symbol 함수를 호출하여 생성한다. 이 때 생성된 심벌 값은 &lt;strong&gt;외부로 노출되지 않아 확인할 수 없다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const mySymbol = Symbol();
+console.log(typeof mySymbol); // symbol
+console.log(mySymbol);// Symbol()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Symbol 함수에는 선택적으로 문자열을 인수로 전달할 수 있다. 이 문자열은 생성된 심벌 값에 대한 설며으로 디버깅 용도로만 사용되며 심벌 값 생성에는 영향을 끼치지 않는다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// 심벌값에 대한 설명이 같더라도 유일무이한 심벌 값을 생성
+
+const mySymbol1= Symbol(&apos;mySymbol&apos;);
+const mySymbol2= Symbol(&apos;mySymbol&apos;);
+
+console.log(mySymbol1===mySymbol2) // false&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;심벌값도 객체처럼 접근하면 암묵적으로 래퍼 객체를 생성한다. 심벌 값은 암묵적으로 문자열이나 숫자 타입으로 변환되지 않는다.
+단 boolean 타입으로는 암묵적으로 타입 변환된다. 이를 통해 if문에서 존재 확인이 가능하다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const mySymbol= Symbol();
+console.log(!!mySymbol); //true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Symbol.for&lt;/code&gt; 메서드는 인수로 전달받은 문자열을 사용하여 키와 심벌 값의 쌍들이 저장되어있는 전역 심벌 레지스트리에서 해당 키와 일치하는 심벌 값을 검색한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;검색에 성공하면 새로운 심벌 값을 생성하지 않고 검색된 심벌 값을 반환한다.&lt;/li&gt;
+&lt;li&gt;검색에 실패하면 새로운 심벌 값을 생성하여 &lt;code class=&quot;language-text&quot;&gt;Symbol.for&lt;/code&gt; 메서드의 인수로 전달된 키로 전역심벌 레지스트리에 저장한 후 생성된 심벌 값을 반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const s1 = Symbol.for(&apos;mySymbol&apos;);
+const s2 = Symbol.for(&apos;mySymbol&apos;);
+
+console.log(s1 === s2); // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Symbol.for&lt;/code&gt; 메서드를 사용하면 애플리케이션 전역에서 중복되지 않는 유일무이한 상수인 심벌 값을 단 하나만 생성하여 전역 심벌 레지스트리를 통해 공유 할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Symbol.keyFor&lt;/code&gt; 메서드를 사용하면 전역 심벌 레지스트리에 저장된 심벌 값의 키를 추출 할 수 있다.&lt;/p&gt;
+&lt;h1 id=&quot;3-심벌과-상수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EC%8B%AC%EB%B2%8C%EA%B3%BC-%EC%83%81%EC%88%98&quot; aria-label=&quot;3 심벌과 상수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 심벌과 상수&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const Direction = {
+  UP: 1,
+  DOWN: 2,
+  LEFT: 3,
+  RIGHT: 4
+}
+
+const myDirection = Direction.UP;
+
+if(myDirection === Direction.UP) {
+  console.log(&quot;UP&quot;)
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;값에는 특별한 값이 없고 상수 이름 자체에 의미가 있는 경우가 있다. 이러한 경우 변경/중복 될 가능성이 있는 무의미한 상수 대신 중복될 가능성이 없는 유일무이한 심벌 값을 사용할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const Direction = {
+  UP: Symbol(&apos;up&apos;),
+  DOWN: Symbol(&apos;down&apos;),
+  LEFT: Symbol(&apos;left&apos;),
+  RIGHT: Symbol(&apos;right&apos;)
+}
+
+const myDirection = Direction.UP;
+
+if(myDirection === Direction.UP) {
+  console.log(&quot;UP&quot;)
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;4-심벌과-프로퍼티-키&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-%EC%8B%AC%EB%B2%8C%EA%B3%BC-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%ED%82%A4&quot; aria-label=&quot;4 심벌과 프로퍼티 키 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 심벌과 프로퍼티 키&lt;/h1&gt;
+&lt;p&gt;객체의 프로퍼티 키는 빈 문자열을 포함하는 모든 문자열 또는 심벌 값으로 만들 수 있으며, 동적으로 생성 할 수도 있다.
+심벌 값을 프로퍼티 키로 사용하라면 프로퍼티 키로 사용할 심벌 값에 대괄호를 사용해야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const obj = {
+  [Symbol.for(&apos;mySymbol&apos;)]: 1
+};
+
+obj[Symbol.for(&apos;mySymbol&apos;)]; // 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;심벌 값은 유일무이한 값이므로 심벌 값으로 프로퍼티 키를 만들면 다른 프로퍼티 키와 절대 충돌하지 않는다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;5-심벌과-프로퍼티-은닉&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-%EC%8B%AC%EB%B2%8C%EA%B3%BC-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0-%EC%9D%80%EB%8B%89&quot; aria-label=&quot;5 심벌과 프로퍼티 은닉 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. 심벌과 프로퍼티 은닉&lt;/h1&gt;
+&lt;p&gt;심벌 값을 프로퍼티 키로 사용하여 생성한 프로퍼티는 은닉할 수 있다. ES6에서 도입된 Object.getOwnPropertySymbols 메서드를 사용하면 심벌 값을 프로퍼티 키로 사용하여 생성한 프로퍼티를 찾을 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const obj = {
+  [Symbol(&apos;mySymbol&apos;)]: 1
+}
+
+for (const key in obj) {
+  console.log(key); //
+}
+
+console.log(Object.keys(obj)); // []
+console.log(Object.getOwnPropertyNames(obj)); // []
+
+console.log(Object.getOwnPropertySymbols(obj)); // [Symbol(mySymbol)]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;6-심벌과-표준-빌트인-객체-확장&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#6-%EC%8B%AC%EB%B2%8C%EA%B3%BC-%ED%91%9C%EC%A4%80-%EB%B9%8C%ED%8A%B8%EC%9D%B8-%EA%B0%9D%EC%B2%B4-%ED%99%95%EC%9E%A5&quot; aria-label=&quot;6 심벌과 표준 빌트인 객체 확장 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;6. 심벌과 표준 빌트인 객체 확장&lt;/h1&gt;
+&lt;p&gt;표준 빌트인 객체에 사용자 정의 메서드를 직접 추가하여 확장하는것은 권장하지 않는다. 그 이유는 개발자가 직접 추가한 메서드와 미래에 표준 사양으로 추가될 메서드의 이름이 중복될 수 있기 때문이다.&lt;/p&gt;
+&lt;p&gt;하지만 중복될 가능성이 없는 심벌 값으로 프로퍼티 키를 생성하여 표준 빌트인 객체를 확장하면 표준 빌트인 객체의 기존 프로퍼티 키와 충돌하지 않는것은 물론 추가될지 모르는 어떤 프로퍼티 키와도 충돌할 위험이 없다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[32. String]]></title><description><![CDATA[1. String 생성자 함수 표준 빌트인 객체인 String 객체는 생성자 함수 객체다. new 연산자와 함께 호출하여 String 인스턴스를 생성할 수 있다. String 생성자 함수에 인수를 전달하지 않고 new…]]></description><link>https://github.com/sangzun-han/자바스크립트/32.String/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/32.String/</guid><pubDate>Thu, 06 Jan 2022 13:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-string-생성자-함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-string-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98&quot; aria-label=&quot;1 string 생성자 함수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. String 생성자 함수&lt;/h1&gt;
 &lt;p&gt;표준 빌트인 객체인 String 객체는 생성자 함수 객체다. new 연산자와 함께 호출하여 String 인스턴스를 생성할 수 있다.&lt;/p&gt;
 &lt;p&gt;String 생성자 함수에 인수를 전달하지 않고 new 연산자와 함께 호출하면 [[StringData]] 내부 슬롯에 빈 문자열을 할당한 String 래퍼 객체를 생성한다.&lt;/p&gt;
 &lt;p&gt;인수를 전달하면 [[StringData]] 내부 슬롯에 인수로 전달받은 문자열을 할당한 String 래퍼 객체를 생성한다.&lt;/p&gt;
