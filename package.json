@@ -36,8 +36,8 @@
     "gatsby-transformer-sharp": "^2.12.0",
     "katex": "^0.15.1",
     "prismjs": "^1.23.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-rotating-text": "^1.4.1",
     "sass": "^1.32.8"
