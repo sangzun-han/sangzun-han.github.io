@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import './style.scss';
 
-const PostHeader = ({ post, viewCount }) => {
+const PostHeader = ({ post }) => {
   return (
     <header className="post-header-wrapper">
       <div className="post-header">
@@ -21,7 +21,6 @@ const PostHeader = ({ post, viewCount }) => {
         <h1 className="title">{post.title}</h1>
         <div className="info">
           posted by <strong>{post.author}</strong> · {post.date}
-          {viewCount && ` · ${viewCount} views`}
         </div>
       </div>
     </header>
