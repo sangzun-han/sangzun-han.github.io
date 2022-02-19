@@ -1,4 +1,152 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 18 Jan 2022 11:15:27 GMT</lastBuildDate><item><title><![CDATA[33. String]]></title><description><![CDATA[1. 심벌이란?  은 ES6에서 도입된 7번째 데이터 타입으로 변경 불가능한 원시 타입의 값이다. 심벌값은 다른 값과 중복되지 않는 유일무이한 값이다. 따라서 이름의 충돌 위험이 없는 유일한 프로퍼티 키를 만들기 위해 사용한다.…]]></description><link>https://github.com/sangzun-han/자바스크립트/33.Sybmol/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/33.Sybmol/</guid><pubDate>Mon, 17 Jan 2022 21:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-심벌이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%8B%AC%EB%B2%8C%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;1 심벌이란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 심벌이란?&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 19 Feb 2022 03:29:53 GMT</lastBuildDate><item><title><![CDATA[34. 이터러블]]></title><description><![CDATA[1. 이터레이션 프로토콜 ES6에서 도입된 iteration protocol은 순회 가능한 데이터 컬렉션을 만들기 위해 EMCAScript 사양에 정의하여 미리 약속한 규칙이다. ES6 이전의 배열, 문자열, 유사 배열 객체, DOM…]]></description><link>https://github.com/sangzun-han/자바스크립트/34.이터러블/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/34.이터러블/</guid><pubDate>Fri, 18 Feb 2022 21:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-이터레이션-프로토콜&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%EC%85%98-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C&quot; aria-label=&quot;1 이터레이션 프로토콜 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 이터레이션 프로토콜&lt;/h1&gt;
+&lt;p&gt;ES6에서 도입된 iteration protocol은 순회 가능한 데이터 컬렉션을 만들기 위해 EMCAScript 사양에 정의하여 미리 약속한 규칙이다.&lt;/p&gt;
+&lt;p&gt;ES6 이전의 배열, 문자열, 유사 배열 객체, DOM 컬렉션등은 통일된 규약 없이 각자 나름의 구조를 가지고 for문, for … in 문, forEach 메서드 등 다양한 방법으로 순회할 수 있었다.&lt;/p&gt;
+&lt;p&gt;ES6에서는 순회 가능한 데이터 컬렉션을 이터레이션 프로토콜을 준수하는 이터러블로 통일하여 for … of문, 스프레드 문법, 배열 디스트럭처링 할당의 대상으로 사용할 수 있도록 일원화 했다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;iterable protocol : Symbol.iterator를 프로퍼티 키로 사용한 메서드를 직접 구현하거나 프로토타입 체인을 통해 상속받은 Symbol.iterator 메서드를 호출하면 이터레이터 프로토콜을 준수한 이터레이터를 반환한다. &lt;strong&gt;이러한 규약을 이터러블 프로토콜이라 한다. 이터러블 프로토콜을 준수한 객체를 &lt;code class=&quot;language-text&quot;&gt;이터러블&lt;/code&gt;이라 한다.&lt;/strong&gt;
+&lt;code class=&quot;language-text&quot;&gt;이터러블&lt;/code&gt;은 for … of 문으로 순회할 수 있으며 스프레드 문법과 배열 디스트럭처링 할당의 대상으로 사용할 수 있다.&lt;/li&gt;
+&lt;li&gt;iterator protocol : 이터러블의 Symbol.iteraotor 메서드를 호출하면 이터레이터 프로토콜을 준수한 이터레이터를 반환한다. 이터레이터는 &lt;code class=&quot;language-text&quot;&gt;next&lt;/code&gt; 메서드를 소유하여 &lt;code class=&quot;language-text&quot;&gt;next&lt;/code&gt; 메서드를 호출하면 이터러블을 순회하며 value와 done 프로퍼티를 갖는 iterator result object를 반환한다. &lt;strong&gt;이러한 규약을 이터레이터 프로토이라 한다.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/iteration.jpeg&quot; alt=&quot;iteration&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;1-1-이터러블&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-1-%EC%9D%B4%ED%84%B0%EB%9F%AC%EB%B8%94&quot; aria-label=&quot;1 1 이터러블 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1-1. 이터러블&lt;/h1&gt;
+&lt;p&gt;이터러블 프로토콜을 준수한 객체를 이터러블이라 한다. 이터러블인지 확인하는 함수는 아래 코드와 같다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const isIterable = v =&gt; v !== null &amp;amp;&amp;amp; typeof v[Symbol.iterator] === &apos;function&apos;;
+
+isIterable([]); // true
+isIterable(&apos;&apos;); // true
+isIterable(new Map()); // true
+isIterable(new Set()); // true
+isIterable({}); // false&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Symbol.iterator 메서드를 직접 구현하지 않거나 상속받지 않은 일반 객체는 이터러블 프로토콜을 준수한 이터러블이 아니다. 따라서 일반 객체는 for … of 문으로 순회할 수 없으며 스프레드 문법과 배열 디스트럭처링 할당의 대상으로 사용할 수 없다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;하지만 일반 객체도 이터러블 프로토콜을 준수하도록 구현하면 이터러블이 된다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;1-2-이터레이터&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-2-%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%ED%84%B0&quot; aria-label=&quot;1 2 이터레이터 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1-2. 이터레이터&lt;/h1&gt;
+&lt;p&gt;이터러블의 Symbol.iterator 메서드를 호출하면 이터레이터 프로토콜을 준수한 이터레이터를 반환한다. 이터러블의 &lt;code class=&quot;language-text&quot;&gt;Symbol.iterator 메서드가 반환한 이터레이터는 next 메서드를 갖는다.&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const array = [1,2,3];
+
+const iterator = array[Symbol.iterator]();
+
+console.log(&apos;next&apos; in iterator); // true&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이터레이터의 next 메서드는 이터러블의 각 요소를 순회하기 위한 포인터의 역할을 한다. next 메서드를 호출하면 이터러블을 순차적으로 한 단계씩 순회하며 순회 결과를 나타내는 &lt;code class=&quot;language-text&quot;&gt;iterator result object&lt;/code&gt;를 반환한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const array = [1,2,3];
+const iterator = array[Symbol.iterator]();
+
+console.log(iterator.next()); // {value: 1, done: false}
+console.log(iterator.next()); // {value: 2, done: false}
+console.log(iterator.next()); // {value: 3, done: false}
+console.log(iterator.next()); // {value: undefined, done: false}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이터레이터의 next 메서드가 반환하는 iterator result object의 value 프로퍼티는 현재 순회 중인 이터러블의 값을 나타내며 done 프로퍼티는 이터러블의 순회 완료 여부를 나타낸다.&lt;/p&gt;
+&lt;h1 id=&quot;2-for--of-문&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-for--of-%EB%AC%B8&quot; aria-label=&quot;2 for  of 문 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. for … of 문&lt;/h1&gt;
+&lt;p&gt;for … of 문은 이터러블을 순회하면서 이터러블의 요소를 변수에 할당한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;for (변수선언문 of 이터러블) {}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;for … of 문은 내부적으로 이터레이터의 next 메서드를 호출하여 이터러블을 순회하며 next 메서드가 iterator result object의 value 프로퍼티 값을 for … of 문의 변수에 할당한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;for (const item of [1,2,3]) {
+  console.log(item); // 1 2 3
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;3-이터러블과-유사-배열-객체&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EC%9D%B4%ED%84%B0%EB%9F%AC%EB%B8%94%EA%B3%BC-%EC%9C%A0%EC%82%AC-%EB%B0%B0%EC%97%B4-%EA%B0%9D%EC%B2%B4&quot; aria-label=&quot;3 이터러블과 유사 배열 객체 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 이터러블과 유사 배열 객체&lt;/h1&gt;
+&lt;p&gt;유사 배열 객체는 마치 배열처럼 인덱스로 프로퍼티 값에 접근할 수 있꼬 length 프로퍼티 값을 갖는 객체이다. 따라서 유사 배열 객체는 for문으로 순회할 수 있고 배열처럼 인덱스로 프로퍼티 값에 접근할 수 있다.&lt;/p&gt;
+&lt;p&gt;유사 배열 객체는 이터러블이 아닌 일반 객체다. 따라서 for … of 문으로 순회할 수 없다. 하지만 arguments, NodeList, HTMLCollection은 유사 배열 객체이면서 이터러블이다.&lt;/p&gt;
+&lt;p&gt;—&gt; ES6에서 이터러블이 도입되면서 유사 배열 객체인 arguments, NodeList, HTMLCollection 객체에 Symbol.iterator 메서드를 구현하여 이터러블이 되었다. &lt;code class=&quot;language-text&quot;&gt;모든 유사 배열 겍체가 이터러블인 것은 아니다.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ES6에서 도입된 Array.from 메서드를 사용하여 유사 배열 객체 또는 이터러블을 인수로 전달받아 배열로 변환할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const arrayLike = {
+  0:1,
+  1:2,
+  2:3,
+  length:3
+};
+
+const arr = Array.from(arrayLike);
+console.log(arr)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;4-이터레이션-프로토콜의-필요성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%EC%85%98-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EC%9D%98-%ED%95%84%EC%9A%94%EC%84%B1&quot; aria-label=&quot;4 이터레이션 프로토콜의 필요성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. 이터레이션 프로토콜의 필요성&lt;/h1&gt;
+&lt;p&gt;이터레이션 프로토콜은 다양한 데이터 공급자가 하나의 순회 방식을 갖도록 규정하여 데이터 소비자가 효율적으로 다양한 데이터 공급자를 사용할 수 있도록 &lt;code class=&quot;language-text&quot;&gt;데이터 소비자와 데이터 공급자를 연결하는 인터페이스 역할을 한다.&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;5-사용자-정의-이터러블&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%A0%95%EC%9D%98-%EC%9D%B4%ED%84%B0%EB%9F%AC%EB%B8%94&quot; aria-label=&quot;5 사용자 정의 이터러블 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. 사용자 정의 이터러블&lt;/h1&gt;
+&lt;p&gt;이터레이션 프로토콜을 준수하지 않는 일반 객체도 이터레이션 프로토콜을 준수하도록 구현하면 사용자 정의 이터러블이 된다. 아래의 코드는 피보나치 수열을 구현한 사용자 정의 이터러블이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const fibonacci = {
+  [Symbol.iterator]() {
+    let [pre, cur] = [0, 1];
+    const max = 10;
+
+    return {
+      next() {
+        [pre, cur] = [cur, pre + cur];
+        return { value: cur, done: cur &gt;= max};
+      }
+    };
+  }
+};
+
+for (const num of fibonacci) {
+  console.log(num); // 1 2 3 5 8
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위의 fibonacci 이터러블은 내부에 수열의 최대값 max를 가지고 있다. max값은 고정된 값으로 전달한 값으로 변경할 방법이 없는것이 아쉽다. 수열의 최대값을 외부에서 전달하는 방법은 아래 코드와 같다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const fibonacci = function(max) {
+  let [pre, cur] = [0, 1];
+
+  return {
+    [Symbol.iterator]() {
+      return {
+        next() {
+          [pre, cur] = [cur, pre + cur];
+          return { value: cur, done: cur &gt;= max};
+        }
+      };
+    }
+  };
+};
+
+for (const num of fibonacci(10)) {
+  console.log(num); // 1 2 3 5 8
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이이터러블이면서 이레터인 객체를 생성하면 Symbol.iterator 메서드를 호출하지 않아도 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const fibonacciFunc = function(max) {
+  let [pre, cur] = [0, 1];
+
+  return {
+    [Symbol.iterator]() {return this;},
+    next() {
+      [pre, cur] = [cur, pre + cur];
+      return {value: cur, done: cur &gt;= max};
+    }
+  };
+};
+
+let iter = fibonacciFunc(10); // iter는 이터러블이면서 이터레이터이다.
+
+for (const num of iter) {
+  console.log(num); // 1 2 3 5 8
+}
+
+iter = fibonacciFunc(10);
+
+console.log(iter.next()); // {value: 1, done: false }
+console.log(iter.next()); // {value: 2, done: false }
+console.log(iter.next()); // {value: 3, done: false }
+console.log(iter.next()); // {value: 5, done: false }
+console.log(iter.next()); // {value: 8, done: false }
+console.log(iter.next()); // {value: 13, done: true }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;무한 이터러블을 생성하는 함수를 통해 무한 수열을 간단히 구현할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const fibonacciFunc = function(max) {
+  let [pre, cur] = [0, 1];
+
+  return {
+    [Symbol.iterator]() {return this;},
+    next() {
+      [pre, cur] = [cur, pre + cur];
+      return {value: cur}; // 무한을 구현하기 위해 done을 생략한다.
+    }
+  };
+};
+
+for (const num of fibonacciFunc()) {
+  if (num &gt; 10000) break;
+  console.log(num);
+}
+
+// 배열 디스트럭처링 할당을 통해 무한 이터러블에서 3개의 요소만 가져올 수 있다.
+const [f1,f2,f3] = fibonacciFunc();
+console.log(f1,f2,f3) // 1 2 3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;지연 평가(lazy evaluation)&lt;/code&gt;는 데이터가 필요한 시점 이전까지는 미리 데이터를 생성하지 않다가 데이터가 필요한 시점이 되면 그때서야 데이터를 생성하는 기법이다.&lt;/p&gt;
+&lt;p&gt;fibonacciFunc 함수가 생성한 무한 이터러블은 데이터를 공급하는 메커니즘을 구현한 것으로 데이터 소비자인 for … of 문이나 배열 디스트럭처링 할당등이 실행되기 이전까지 데이터를 생성하지 않는다. for … of 문의 경우 이터러블을 순회할 때 내부에서 이터레이터의 next 메서드를 호출하는데 이때 데이터가 생성된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;지연평가를 사용하면 불필요한 데이터를 미리 생성하지 않고 필요한 데이터를 필요한 순간에 생성하므로 빠른 실행속도를 기대할 수 있고 불필요한 메모리를 소비하지 않으며 무한도 표현할 수 있다는 장점이 있다.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[33. Symbol]]></title><description><![CDATA[1. 심벌이란?  은 ES6에서 도입된 7번째 데이터 타입으로 변경 불가능한 원시 타입의 값이다. 심벌값은 다른 값과 중복되지 않는 유일무이한 값이다. 따라서 이름의 충돌 위험이 없는 유일한 프로퍼티 키를 만들기 위해 사용한다.…]]></description><link>https://github.com/sangzun-han/자바스크립트/33.Sybmol/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/33.Sybmol/</guid><pubDate>Mon, 17 Jan 2022 21:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-심벌이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%8B%AC%EB%B2%8C%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;1 심벌이란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 심벌이란?&lt;/h1&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;symbol&lt;/code&gt; 은 ES6에서 도입된 7번째 데이터 타입으로 변경 불가능한 원시 타입의 값이다. 심벌값은 다른 값과 중복되지 않는 유일무이한 값이다. 따라서 이름의 충돌 위험이 없는 유일한 프로퍼티 키를 만들기 위해 사용한다.&lt;/p&gt;
 &lt;h1 id=&quot;2-심벌값-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%8B%AC%EB%B2%8C%EA%B0%92-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;2 심벌값 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 심벌값 생성&lt;/h1&gt;
 &lt;p&gt;심벌 값은 Symbol 함수를 호출하여 생성한다. 이 때 생성된 심벌 값은 &lt;strong&gt;외부로 노출되지 않아 확인할 수 없다.&lt;/strong&gt;&lt;/p&gt;
