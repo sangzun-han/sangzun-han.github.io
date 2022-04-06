@@ -1,4 +1,178 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 26 Feb 2022 08:20:12 GMT</lastBuildDate><item><title><![CDATA[35. 스프레드 문법]]></title><description><![CDATA[ES6에서 도입된 스프레드 문법(spread syntax)는 하나로 뭉쳐있는 여러 값들의 집합을 펼쳐서 개별적인 값들의 목록으로 만든다. 스프레드 문법을 사용할 수 있는 대상은 Array, String, Map, Set, DOM…]]></description><link>https://github.com/sangzun-han/자바스크립트/35.스프레드 문법/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/35.스프레드 문법/</guid><pubDate>Fri, 25 Feb 2022 21:00:00 GMT</pubDate><content:encoded>&lt;p&gt;ES6에서 도입된 스프레드 문법(spread syntax)는 하나로 뭉쳐있는 여러 값들의 집합을 펼쳐서 개별적인 값들의 목록으로 만든다. 스프레드 문법을 사용할 수 있는 대상은 Array, String, Map, Set, DOM 컬렉션, arguments와 같이 for … of 문으로 순회할 수 있는 이터러블에 한정된다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dev Note]]></title><description><![CDATA[개발일기]]></description><link>https://github.com/sangzun-han</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 06 Apr 2022 22:35:59 GMT</lastBuildDate><item><title><![CDATA[37. Set과 Map]]></title><description><![CDATA[1. Set Set 객체는  유일한 값들의 집합이다. 구분 배열 Set 객체 동일한 값을 중복하여 포함할 수 있다. O X 요소 순서에 의미가 있다. O X 인덱스로 요소에 접근할 수 있다. O X Set…]]></description><link>https://github.com/sangzun-han/자바스크립트/37.Set과 Map/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/37.Set과 Map/</guid><pubDate>Thu, 17 Mar 2022 21:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-set&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-set&quot; aria-label=&quot;1 set permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Set&lt;/h1&gt;
+&lt;p&gt;Set 객체는 &lt;code class=&quot;language-text&quot;&gt;중복되지 않는&lt;/code&gt; 유일한 값들의 집합이다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;구분&lt;/th&gt;
+&lt;th&gt;배열&lt;/th&gt;
+&lt;th&gt;Set 객체&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;동일한 값을 중복하여 포함할 수 있다.&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;요소 순서에 의미가 있다.&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;인덱스로 요소에 접근할 수 있다.&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Set 생성자 함수는 이터러블을 인수로 전달받아 Set 객체를 생성한다. 이 때 중복된 값은 Set 객체에 요소로 저장 되지 않는다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const set = new Set([1, 2, 3, 3]);
+console.log(set); // Set(3) {1,2,3}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;2-set-객체-메서드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-set-%EA%B0%9D%EC%B2%B4-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;2 set 객체 메서드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. Set 객체 메서드&lt;/h1&gt;
+&lt;p&gt;Set 객체의 요소 개수를 확인할때는 &lt;code class=&quot;language-text&quot;&gt;Set.prototype.size&lt;/code&gt; 프로퍼티를 사용한다. size 프로퍼티는 setter 함수 없이 getter 함수만 존재하는 접근자 프로퍼티이다. 따라서 size 프로퍼티에 숫자를 할당하여 Set 객체의 요소 개수를 변경할 수 없다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const set = new Set[1, 2, 3, 3]);
+console.log(set.size); //
+
+set.size = 10; // 무시됨&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Set 객체에 요소를 추가할 때는 &lt;code class=&quot;language-text&quot;&gt;Set.prototype.add&lt;/code&gt; 메서드를 사용한다. add 메서드는 새로운 요소가 추가된 Set 객체를 반환한다. 따라서 add 메서드를 연속적으로 호출할 수 있다.&lt;/p&gt;
+&lt;p&gt;Set 객체에 특정 요소가 존재하는지 확인하려면 &lt;code class=&quot;language-text&quot;&gt;Set.prototype.has&lt;/code&gt; 메서드를 사용한다. has 메서드는 불리언 값을 반환한다.&lt;/p&gt;
+&lt;p&gt;Set 객체의 특정 요소를 삭제하려면 &lt;code class=&quot;language-text&quot;&gt;Set.prototype.delete&lt;/code&gt; 메서드를 사용한다 delete 메서드는 불리언 값을 반환한다.&lt;/p&gt;
+&lt;p&gt;Set 객체의 모든 요소를 일괄 삭제하려면 &lt;code class=&quot;language-text&quot;&gt;Set.prototype.clear&lt;/code&gt; 메서드를 사용한다. clear 메서드는 언제나 undefined를 반환한다.&lt;/p&gt;
+&lt;p&gt;Set 객체의 요소를 순회하려면 &lt;code class=&quot;language-text&quot;&gt;Set.prototype.forEach&lt;/code&gt; 메서드를 사용한다. Set 객체는 이터러블이다. 따라서 for … of 문으로 순회할 수 있으며 스프레드 문법과 디스트럭처링의 대상이 될 수도 있다.&lt;/p&gt;
+&lt;p&gt;Set 객체는 수학적 집합을 구현하기 위한 자료구조이다. 따라서 Set 객체를 통해 교집합, 합집합, 차집합등을 구현할 수 있다.&lt;/p&gt;
+&lt;h1 id=&quot;3-map&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-map&quot; aria-label=&quot;3 map permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. Map&lt;/h1&gt;
+&lt;p&gt;Map 객체는 &lt;code class=&quot;language-text&quot;&gt;키와 값의 쌍&lt;/code&gt;으로 이루어진 컬렉션이다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;구분&lt;/th&gt;
+&lt;th&gt;객체&lt;/th&gt;
+&lt;th&gt;Map 객체&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;키로 사용할 수 있는 값&lt;/td&gt;
+&lt;td&gt;문자열 또는 심벌 값&lt;/td&gt;
+&lt;td&gt;객체를 포함한 모든 값&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;이터러블&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;요수 개수 확인&lt;/td&gt;
+&lt;td&gt;Object.keys(obj).length&lt;/td&gt;
+&lt;td&gt;map.size&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Map 생성자 함수는 이터러블을 인수로 전달받아 Map 객체를 생성한다. 이때 인수로 전달되느 이터러블은 키와 값의 쌍으로 이루어진 요소로 구성되어야 한다.&lt;/p&gt;
+&lt;p&gt;Map 생성자 함수의 인수로 전달한 이터러블에 중복된 키를 갖는 요소가 존재하면 값이 덮어써진다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const map = new Map([[&apos;key1&apos;, &apos;value1&apos;], [&apos;key2&apos;, &apos;value2&apos;]]);
+console.log(map); // {&apos;key1&apos; =&gt; &apos;value1&apos;, &apos;key2&apos; =&gt; &apos;value2&apos;}
+
+const map = new Map([[&apos;key1&apos;, &apos;value1&apos;], [&apos;key1&apos;, &apos;value2&apos;]]);
+console.log(map); //  {&apos;key1&apos; =&gt; &apos;value2&apos;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;4-map-객체-메서드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-map-%EA%B0%9D%EC%B2%B4-%EB%A9%94%EC%84%9C%EB%93%9C&quot; aria-label=&quot;4 map 객체 메서드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. Map 객체 메서드&lt;/h1&gt;
+&lt;p&gt;Map 객체의 요소 개수를 확인할 때는 &lt;code class=&quot;language-text&quot;&gt;Map.prototype.size&lt;/code&gt; 프로퍼티를 사용한다.&lt;/p&gt;
+&lt;p&gt;Map 객체의 요소를 추가할 때는 &lt;code class=&quot;language-text&quot;&gt;Map.prototype.set&lt;/code&gt; 메서드를 사용한다. set 메서드는 새로운 요소가 추가된 Map 객체를 반환한다. 따라서 set 메서드를 연속적으로 호출할 수 있다.&lt;/p&gt;
+&lt;p&gt;Map 객체에서 특정 요소를 취득할 때는 &lt;code class=&quot;language-text&quot;&gt;Map.prototype.get&lt;/code&gt; 메서드를 사용한다. get 메서드는 인수로 전달한 키를 갖는 값을 반환하고 인수로 전달한 키를 갖는 요소가 존재하지 않으면 undefined를 반환한다.&lt;/p&gt;
+&lt;p&gt;Map 객체에서 특정 요소가 존재하는지 확인하려면 &lt;code class=&quot;language-text&quot;&gt;Map.prototype.has&lt;/code&gt; 메서드를 사용한다. has 메서드는 불리언 값을 반환한다.&lt;/p&gt;
+&lt;p&gt;Map 객체의 요소를 삭제하려면 &lt;code class=&quot;language-text&quot;&gt;Map.prototype.delete&lt;/code&gt; 메서드를 사용한다. delete 메서드는 불리언 값을 반환한다.&lt;/p&gt;
+&lt;p&gt;Map 객체의 요소를순회하려면 &lt;code class=&quot;language-text&quot;&gt;Map.prototype.forEach&lt;/code&gt; 메서드를 사용한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;첫번째 인수 : 현재 순회중인 요소 값&lt;/li&gt;
+&lt;li&gt;두번째 인수 : 현재 순회중인 요소 키&lt;/li&gt;
+&lt;li&gt;세번째 인수 : 현재 순회중인 Map 객체&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const lee = { name : &apos;Lee&apos; };
+const kim = { name : &apos;Kim&apos; };
+
+const map = new Map([[lee, &apos;developer&apos;], [kim, &apos;designer&apos;]]);
+
+map.forEach((v,k,map) =&gt; console.log(v,k,map))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Map 객체는 이터러블이다. 따라서 for … of 문으로 순회할 수 있으며 스프레드 문법과 배열 디스트럭처링 할당의 대상이 될 수도 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[36. 디스트럭처링 할당]]></title><description><![CDATA[디스트럭처링 할당(destructuring assignment)은 구조화된 배열과 같은 이터러블 또는 객체를 destructuring(비구조화) 하여 1개 이상의 변수에 개별적으로 할당하는 것을 말한다.…]]></description><link>https://github.com/sangzun-han/자바스크립트/36.디스트럭쳐링 할당/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/36.디스트럭쳐링 할당/</guid><pubDate>Fri, 11 Mar 2022 21:00:00 GMT</pubDate><content:encoded>&lt;p&gt;디스트럭처링 할당(destructuring assignment)은 구조화된 배열과 같은 이터러블 또는 객체를 destructuring(비구조화) 하여 1개 이상의 변수에 개별적으로 할당하는 것을 말한다.&lt;/p&gt;
+&lt;h1 id=&quot;1-배열-디스트럭처링-할당&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%B0%B0%EC%97%B4-%EB%94%94%EC%8A%A4%ED%8A%B8%EB%9F%AD%EC%B2%98%EB%A7%81-%ED%95%A0%EB%8B%B9&quot; aria-label=&quot;1 배열 디스트럭처링 할당 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 배열 디스트럭처링 할당&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const arr = [1, 2, 3];
+
+const [one, two, three] = arr;
+console.log(one, two, three); // 1 2 3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;배열 디스트럭처링 할당을 위해서는 변수를 배열 리터럴 형태로 선언해야 한다. 이때 우변에 이터러블을 할당하지 않으면 에러가 발상한다.&lt;/p&gt;
+&lt;p&gt;배열 디스트럭처링 할당의 기준은 배열의 인덱스이다. 즉 순서대로 할당된다, 하지만 변수의 개수와 이터러블의 요소 개수가
+반드시 일치할 필요는 없다.&lt;/p&gt;
+&lt;p&gt;배열 디스트럭처링 할당을 위한 변수에 기본값을 설정할 수 있다. 기본값보다 할당된 값이 우선된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const [x, y] = [1,2];
+const [x, y]; // SyntaxError
+const [a, b] = {}; // TypeError
+
+const [c, d] = [1];
+console.log(c, d); // 1 undefined;
+
+const [e, f] = [1,2,3];
+console.log(e, f); // 1 2
+
+const [a, b , c = 3] = [1,2];
+console.log(a, b, c); // 1 2 3
+
+const [e,f = 10, g = 3] = [1, 2];
+console.log(e, f, g); // 1 2 3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;배열 디스트럭처링 할당을 위한 변수에 Rest 파라미터와 유사하게 &lt;code class=&quot;language-text&quot;&gt;Rest 요소&lt;/code&gt; …을 사용할 수 있다. Rest 요소는 Rest 파라미터와 마찬가지로 반드시 마지막에 위치해야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const [x, ...y] = [1, 2, 3];
+console.log(x, y); // 1 [2, 3]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;2-객체-디스트럭처링-할당&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EA%B0%9D%EC%B2%B4-%EB%94%94%EC%8A%A4%ED%8A%B8%EB%9F%AD%EC%B2%98%EB%A7%81-%ED%95%A0%EB%8B%B9&quot; aria-label=&quot;2 객체 디스트럭처링 할당 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 객체 디스트럭처링 할당&lt;/h1&gt;
+&lt;p&gt;객체 디스트럭처링 할당의 대상은 객체여야 하며, 할당 기준은 프로퍼티 키다. 즉 순서는 의미가 없으며 선언된 변수이름과 프로퍼티 키가 일치하면 할당된다.&lt;/p&gt;
+&lt;p&gt;객체 디스트럭처링 할당을 위해서는 변수를 객체 리터럴 형태로 선언해야 한다. 이때 우변에 객체 또는 객체로 평가될 수 있는 표현식을 할당하지 않으면 에러가 발생한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const { lastName, firstName } = { firstName:&apos;Ungmo&apos;, lastName: &apos;Lee&apos; };&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;객체의 프로퍼티 키와 다른 변수 이름으로 프로퍼티 값을 할당받으려면 아래와 같이 변수를 선언한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const user = { firstName: &apos;Ungmo&apos;, lastName: &apos;Lee&apos; };
+
+const { lastName: ln, firstName: fn } = user;
+console.log(fn,ln); // Ungmo Lee&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;객체 디스트럭처링은 변수에 기본값을 설정할 수 있다. 또한 객체를 인수로 전달받는 함수의 매개변수에도 사용할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const { firstName = &apos;Ungmo&apos;, lastName } = { lastName: &apos;Lee&apos; };
+console.log(firstName, lastName); // Ungmo Lee
+
+function printTodo(todo) {
+  console.log(`할일 ${todo.content}은 ${todo.completed ? &apos;완료&apos; : &apos;미완료&apos;} 상태입니다.`);
+}
+
+printTodo({id: 1, content: &apos;설거지&apos;, completed: true}); // 할일 설거지은 완료 상태입니다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;배열의 요소가 객체인 경우에 배열 디스트럭처링 할당과 객체 디스트럭처링 할당을 혼용할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const todos = [
+  {
+    id: 1, content: &apos;HTML&apos;, completed: true
+  },
+  {
+    id: 2, content: &apos;CSS&apos;, completed: false
+  },
+  {
+    id: 3, content: &apos;JS&apos;, completed: false
+  }
+];
+
+// todos 배열의 두번째 요소인 객체로부터 id 프로퍼티만 추출
+const [, { id }] = todos;
+console.log(id); // 2
+
+// 중첩 객체
+const user = {
+  name: &apos;Lee&apos;,
+  address: {
+    zipCode: &apos;03068&apos;,
+    city: &apos;Seoul&apos;
+  }
+};
+
+// address 프로퍼티 키로 객체를 추출하고 이 객체의 city 프로퍼티 키로 값을 추출
+const { address: { city } } = user;
+console.log(city); // Seoul&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;객체 디스트럭처링 할당을 위한 변수에 Rest 파라미터나 Rest 요소와 유사하게 &lt;code class=&quot;language-text&quot;&gt;Rest 프로퍼티 ...&lt;/code&gt; 을 사용할 수 있다.
+Rest 프로퍼티는 Rest 파라미터나 Rest 요소와 맟나가지로 반드시 마지막에 위치해야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const { x, ...rest } = { x: 1, y: 2, z: 3};
+console.log(x, rest); // 1 {y: 2, z: 3}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[35. 스프레드 문법]]></title><description><![CDATA[ES6에서 도입된 스프레드 문법(spread syntax)는 하나로 뭉쳐있는 여러 값들의 집합을 펼쳐서 개별적인 값들의 목록으로 만든다. 스프레드 문법을 사용할 수 있는 대상은 Array, String, Map, Set, DOM…]]></description><link>https://github.com/sangzun-han/자바스크립트/35.스프레드 문법/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/35.스프레드 문법/</guid><pubDate>Fri, 25 Feb 2022 21:00:00 GMT</pubDate><content:encoded>&lt;p&gt;ES6에서 도입된 스프레드 문법(spread syntax)는 하나로 뭉쳐있는 여러 값들의 집합을 펼쳐서 개별적인 값들의 목록으로 만든다. 스프레드 문법을 사용할 수 있는 대상은 Array, String, Map, Set, DOM 컬렉션, arguments와 같이 for … of 문으로 순회할 수 있는 이터러블에 한정된다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;console.log(...[1,2,3]); // 1 2 3
 console.log(...&apos;Hello&apos;); // H e l l o&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;스프레드 문법의 결과는 값이 아니다. 따라서 스프레드 문법의 결과는 변수에 할당 할 수 없다. 스프레드 문법의 결과물은 값으로 사용할 수 없고, 쉼표로 구분한 값의 목록을 사용하는 문백에서만 사용할 수 있다.&lt;/p&gt;
@@ -1923,7 +2097,9 @@ console.log(foo) // default string&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 var value = elem &amp;amp;&amp;amp; elem.value;
 console.log(value) // null&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var foo = &apos;&apos; || &apos;defalut string&apos;;
-console.log(foo) // default string&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[interview]]></title><description><![CDATA[질문 목록]]></description><link>https://github.com/sangzun-han/INTERVIEW/interview/</link><guid isPermaLink="false">https://github.com/sangzun-han/INTERVIEW/interview/</guid><pubDate>Tue, 16 Nov 2021 15:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://github.com/sudheerj/javascript-interview-questions&quot;&gt;질문 목록&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[08. 제어문]]></title><description><![CDATA[1. 블록문 블록문(block statement)은 0개 이상의 문을 중괄호로 묶은 것으로, 코드 블록 또는 블록이라고 부르기도 한다. 자바스크립트는 블록문을 하나의 실행 단위로 취급한다. 2. 조건문 조건문(conditional statement…]]></description><link>https://github.com/sangzun-han/자바스크립트/08.제어문/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/08.제어문/</guid><pubDate>Sat, 13 Nov 2021 14:30:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-블록문&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%B8%94%EB%A1%9D%EB%AC%B8&quot; aria-label=&quot;1 블록문 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 블록문&lt;/h1&gt;
+console.log(foo) // default string&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[interview]]></title><description><![CDATA[1. 브라우저 동작 원리  질문 목록]]></description><link>https://github.com/sangzun-han/INTERVIEW/interview/</link><guid isPermaLink="false">https://github.com/sangzun-han/INTERVIEW/interview/</guid><pubDate>Tue, 16 Nov 2021 15:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-브라우저-동작-원리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC&quot; aria-label=&quot;1 브라우저 동작 원리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 브라우저 동작 원리&lt;/h2&gt;
+&lt;h3 id=&quot;code-classlanguage-text브라우저는-어떻게-동작하는가code&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#code-classlanguage-text%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8F%99%EC%9E%91%ED%95%98%EB%8A%94%EA%B0%80code&quot; aria-label=&quot;code classlanguage text브라우저는 어떻게 동작하는가code permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;code class=&quot;language-text&quot;&gt;브라우저는 어떻게 동작하는가?&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/sudheerj/javascript-interview-questions&quot;&gt;질문 목록&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[08. 제어문]]></title><description><![CDATA[1. 블록문 블록문(block statement)은 0개 이상의 문을 중괄호로 묶은 것으로, 코드 블록 또는 블록이라고 부르기도 한다. 자바스크립트는 블록문을 하나의 실행 단위로 취급한다. 2. 조건문 조건문(conditional statement…]]></description><link>https://github.com/sangzun-han/자바스크립트/08.제어문/</link><guid isPermaLink="false">https://github.com/sangzun-han/자바스크립트/08.제어문/</guid><pubDate>Sat, 13 Nov 2021 14:30:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;1-블록문&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%B8%94%EB%A1%9D%EB%AC%B8&quot; aria-label=&quot;1 블록문 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 블록문&lt;/h1&gt;
 &lt;p&gt;블록문(block statement)은 0개 이상의 문을 중괄호로 묶은 것으로, 코드 블록 또는 블록이라고 부르기도 한다. 자바스크립트는 블록문을 하나의 실행 단위로 취급한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{
   var foo = 10;
