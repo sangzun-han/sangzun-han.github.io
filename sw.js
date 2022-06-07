@@ -27,42 +27,39 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-2034513abae2e609ffb0.js"
+    "url": "webpack-runtime-17d470c52c46c6947d3c.js"
   },
   {
-    "url": "styles.6eaee109c3d7879e1b89.css"
+    "url": "styles.853e65090dc89bfbb4ac.css"
   },
   {
-    "url": "styles-407fe62976dc5310c43e.js"
+    "url": "framework-043f1197be387cb18d15.js"
   },
   {
-    "url": "framework-9086242092609fce62cd.js"
-  },
-  {
-    "url": "app-f4ec8ffb0d34ba6638e6.js"
+    "url": "app-c1938149d3b8da35bd1a.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "204adab857ec4d40acf026cc2d179d67"
+    "revision": "88749f0b4c4bf0d5ece10664df995160"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-0b8a70f65d0cff4a7a25.js"
   },
   {
-    "url": "polyfill-384ea82b9c97dbd7ee60.js"
+    "url": "polyfill-9b356b5dc44213e24f34.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "5ba4e1e7cc828642dacb9aae55c4fb38"
+    "revision": "62859c21b476259bf1eefa772a21964d"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -88,6 +85,24 @@ const MessageAPI = {
 
   clearPathResources: event => {
     event.waitUntil(idbKeyval.clear())
+
+    // We detected compilation hash mismatch
+    // we should clear runtime cache as data
+    // files might be out of sync and we should
+    // do fresh fetches for them
+    event.waitUntil(
+      caches.keys().then(function (keyList) {
+        return Promise.all(
+          keyList.map(function (key) {
+            if (key && key.includes(`runtime`)) {
+              return caches.delete(key)
+            }
+
+            return Promise.resolve()
+          })
+        )
+      })
+    )
   },
 
   enableOfflineShell: () => {
@@ -154,7 +169,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-f4ec8ffb0d34ba6638e6.js`))) {
+  if (!resources || !(await caches.match(`/app-c1938149d3b8da35bd1a.js`))) {
     return await fetch(event.request)
   }
 
