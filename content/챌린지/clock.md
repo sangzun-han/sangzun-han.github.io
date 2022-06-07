@@ -1,0 +1,105 @@
+---
+emoji: 😂
+title: 02. JavaScript Challenge
+date: '2022-06-08 00:00:00'
+author: sangzun
+tags: 자바스크립트
+categories: 챌린지
+---
+
+### 02. Js and CSS Clock
+
+- `transform-origin`을 설정하지 않으면 회전 중심은 가운데를 기준으로 한다.
+- deg는 360이 최대값이므로 분,초는 60으로 나누고 시간은 12로 나누어서 360도를 곱해준다. 그리고 시계바늘이 12에서 시작하기 위해 90deg를 따로 설정했으므로 맞춰주기 위해 90도를 더해준다.
+- `transition-timingfunction`을 이용하면 transition 효과의 시간당 속도를 설정해줄수 있다.
+
+처음에는 초를 6도씩 회전시키고 360도가 되면 분을 6도 회전시키는 복잡한 방법을 생각했지만 setInterval을 이용해서
+계속해서 시간을 받아오고 그 시간의 각도를 계산하는 방법으로 구현했다.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS + CSS Clock</title>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+
+    <style>
+      html {
+        background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
+        background-size: cover;
+        font-family: "helvetica neue";
+        text-align: center;
+        font-size: 10px;
+      }
+
+      body {
+        margin: 0;
+        font-size: 2rem;
+        display: flex;
+        flex: 1;
+        min-height: 100vh;
+        align-items: center;
+      }
+
+      .clock {
+        width: 30rem;
+        height: 30rem;
+        border: 20px solid white;
+        border-radius: 50%;
+        margin: 50px auto;
+        position: relative;
+        padding: 2rem;
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+          inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .clock-face {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-3px);
+      }
+
+      .hand {
+        width: 50%;
+        height: 6px;
+        background: black;
+        position: absolute;
+        top: 50%;
+        transform-origin: 100%;
+        transform: rotate(90deg);
+        transition: all 0.05s;
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+      }
+    </style>
+
+    <script>
+      const hour = document.querySelector(".hour-hand");
+      const min = document.querySelector(".min-hand");
+      const second = document.querySelector(".second-hand");
+
+      function getDate() {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        second.style.transform = `rotate(${(seconds / 60) * 360 + 90}deg)`;
+        min.style.transform = `rotate(${(minutes / 60) * 360 + 90}deg)`;
+        hour.style.transform = `rotate(${(hours / 12) * 360 + 90}deg)`;
+      }
+
+      setInterval(getDate, 1000);
+    </script>
+  </body>
+</html>
+
+```
