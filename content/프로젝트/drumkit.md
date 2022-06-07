@@ -1,10 +1,10 @@
 ---
 emoji: 😂
-title: 01. JavaScript 30 Challenge
+title: 01. JavaScript Challenge
 date: '2022-06-07 00:00:00'
 author: sangzun
 tags: 자바스크립트
-categories: project
+categories: 프로젝트
 ---
 
 라이브러리나 프레임워크 사용 없이 모던자바스크립트만으로 하루에 하나씩 30일동안 30가지 미니 프로젝트를 만드는 챌린지입니다. 프로젝트 아이디어를 떠올리기 어려워 주제와 디자인이 정해진 미니 프로젝트를 따라 만들어보는것으로 시작했습니다.
