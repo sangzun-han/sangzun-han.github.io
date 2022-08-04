@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-category-template-js",
     "path": "/posts/알고리즘",
-    "result": {"pageContext":{"currentCategory":"알고리즘","categories":["All","JAVA","알고리즘","프로젝트","javascript"],"edges":[{"node":{"id":"332c73f5-1831-5d01-8922-82a01c4af4e6","excerpt":"백준 11047","fields":{"slug":"/알고리즘/11047/"},"frontmatter":{"categories":"알고리즘","title":"백준 11047","date":"June 25, 2022"}},"next":{"fields":{"slug":"/프로젝트/market/"}},"previous":{"fields":{"slug":"/JAVA/자바기초1/"}}}]}},
+    "result": {"pageContext":{"currentCategory":"알고리즘","categories":["All","알고리즘","JAVA","프로젝트","javascript"],"edges":[{"node":{"id":"f318eb7e-4c6f-5544-9516-81168136789d","excerpt":"강의실 배정 어떤 방법으로 강의를 선택해야 회의실이 최소가 될까? 시작시간이 가장 빠른것을 선택 (X) 끝나는 시간이 가장 빠른것을 선택 -> 종료되는 강의시간이 빠르면 더 많은 강의를 배정할 확률이 높아진다. 수업시간이 짧은 강의부터 선택 (X)-> 0-1 1-4 4-5 3-5 시작시간을 기준으로 정렬 탐색 첫번째 강의의 끝나는시간을 큐에 추가 다음 강의의 시작시간이랑 큐의 가장 위에있는값 비교 다음 강의 시작시간 >= 큐의 가장 위에있는 값 —> 같은 강의실 써도된다. (큐에서 제거) 조건을 만족하지 못하면 큐에 추가","fields":{"slug":"/알고리즘/백준11000/"},"frontmatter":{"categories":"알고리즘","title":"백준 11000 강의실 배정","date":"August 02, 2022"}},"next":{"fields":{"slug":"/JAVA/자바기초3/"}},"previous":null}]}},
     "staticQueryHashes": ["1073350324","1956554647","2938748437"]}
