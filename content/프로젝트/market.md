@@ -29,7 +29,8 @@ categories: 프로젝트
 - 전역상태관리 라이브러리를 사용하지 않고 진행했는데 진행하면서 props drilling이 발생하는것을 발견했습니다.
   당시에는 전역상태관리 라이브러리의 필요성을 느끼지 못했고 페이지도 몇개 존재하지 않았지만
   프로젝트의 규모가 조금만 더 커져도 꼭 필요하겠다는 생각이 들었습니다.
-- ```javascript
+
+  ```javascript
   // App.jsx
   const [products, setProducts] = useState([]);
 
